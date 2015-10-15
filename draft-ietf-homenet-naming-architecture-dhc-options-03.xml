@@ -1,718 +1,737 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?rfc linefile="1:/tmp/CGI11956.1"?>
 <?rfc linefile="1:/tmp/CGI11956.1"?>
-<?rfc toc="yes"?>         <!-- generate a table of contents -->
+<?rfc toc="yes"?>             <!-- generate a table of contents -->
 <?rfc tocdepth="5"?>
-<?rfc symrefs="yes"?>     <!-- use anchors instead of numbers for references -->
+<?rfc symrefs="yes"?>         <!-- use anchors instead of numbers for references -->
 <?rfc sortrefs="yes" ?>   <!-- alphabetize the references -->
-<?rfc compact="yes" ?>    <!-- conserve vertical whitespace -->
+<?rfc compact="yes" ?>        <!-- conserve vertical whitespace -->
 <?rfc subcompact="no" ?>  <!-- but keep a blank line between list items -->
 
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
-    <!ENTITY rfc1034 PUBLIC "" 
-      "http://xml.resource.org/public/rfc/bibxml/reference.RFC.1034.xml">
-    <!ENTITY rfc1035 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1035.xml'>
-    <!ENTITY rfc1996 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1996.xml'>
-    <!ENTITY rfc2119 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml'>
-    <!ENTITY rfc2136 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2136.xml'>
-    <!ENTITY rfc3007 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3007.xml'>
-    <!ENTITY rfc2181 PUBLIC ""
-      "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2181.xml">
-    <!ENTITY rfc2845 PUBLIC ""
-      "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2845.xml">
-    <!ENTITY rfc2930 PUBLIC ""
-      "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2930.xml">
-    <!ENTITY rfc2931 PUBLIC ""
-      "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2931.xml">
-    <!ENTITY rfc3315 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3315.xml'>
-    <!ENTITY rfc3947 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3947.xml'>
-    <!ENTITY rfc3948 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3948.xml'>
-    <!ENTITY rfc1035 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1035.xml'>
-    <!ENTITY rfc4033 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4033.xml'>
-    <!ENTITY rfc4034 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4034.xml'>
-    <!ENTITY rfc4035 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4035.xml'>
-    <!ENTITY rfc4301 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4301.xml'>
-    <!ENTITY rfc5936 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5936.xml'>
-    <!ENTITY rfc7296 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7296.xml'>
-    <!ENTITY rfc6672 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6672.xml'>
-    <!ENTITY rfc6347 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6347.xml'>
-    <!ENTITY rfc5246 PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5246.xml'>
-    <!ENTITY I-D.ietf-homenet-front-end-naming-delegation PUBLIC ''
-      'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-homenet-front-end-naming-delegation.xml'>
-    <!ENTITY I-D.sury-dnsext-cname-dname PUBLIC "" 
-      "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-sury-dnsext-cname-dname-00.xml">
-    <!ENTITY I-D.ietf-dhc-option-guidelines PUBLIC "" 
-      "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-ietf-dhc-option-guidelines-17.xml">
-    <!ENTITY I-D.andrews-dnsop-pd-reverse PUBLIC "" 
-      "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-andrews-dnsop-pd-reverse-02.xml">
+        <!ENTITY rfc1034 PUBLIC ""
+          "http://xml.resource.org/public/rfc/bibxml/reference.RFC.1034.xml">
+        <!ENTITY rfc1035 PUBLIC ''        'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1035.xml'>
+        <!ENTITY rfc1996 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1996.xml'>
+        <!ENTITY rfc2119 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml'>
+        <!ENTITY rfc2136 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2136.xml'>
+        <!ENTITY rfc3007 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3007.xml'>
+        <!ENTITY rfc2181 PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.2181.xml">
+        <!ENTITY rfc2845 PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.2845.xml">
+        <!ENTITY rfc2930 PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.2930.xml">
+        <!ENTITY rfc2931 PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.2931.xml">
+        <!ENTITY rfc3315 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3315.xml'>
+        <!ENTITY rfc3947 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3947.xml'>
+        <!ENTITY rfc3948 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3948.xml'>
+        <!ENTITY rfc1035 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1035.xml'>
+        <!ENTITY rfc4033 PUBLIC ''
+          'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4033.xml'>
+        <!ENTITY rfc4034 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4034.xml'>
+        <!ENTITY rfc4035 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4035.xml'>
+        <!ENTITY rfc4301 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4301.xml'>
+        <!ENTITY rfc5936 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5936.xml'>
+        <!ENTITY rfc7296 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7296.xml'>
+        <!ENTITY rfc6672 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6672.xml'>
+        <!ENTITY rfc6347 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6347.xml'>
+        <!ENTITY rfc5246 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5246.xml'>
+        <!ENTITY I-D.ietf-homenet-front-end-naming-delegation PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-homenet-front-end-naming-delegation.xml'>
+        <!ENTITY I-D.sury-dnsext-cname-dname PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-sury-dnsext-cname-dname-00.xml">
+        <!ENTITY I-D.ietf-dhc-sedhcpv6 PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-dhc-sedhcpv6.xml">
+        <!ENTITY I-D.andrews-dnsop-pd-reverse PUBLIC ""
+"http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-andrews-dnsop-pd-reverse-02.xml">
 ]>
 
 
-<rfc category="std" 
-     ipr="trust200902" 
-     docName="draft-ietf-homenet-naming-architecture-dhc-options-02.txt">
+<rfc category="std"
+         ipr="trust200902"
+         docName="draft-ietf-homenet-naming-architecture-dhc-options-03.txt">
 
-    <front>
-        <title abbrev="DHCP Options for Homenet Naming Architecture">DHCP Options for Homenet Naming Architecture</title>
+        <front>
+            <title abbrev="DHCPv6 Options for Homenet Naming Architecture">DHCPv6 Options for Homenet Naming Architecture</title>
 
+        <author fullname="Daniel Migault" initials="D." surname="Migault (Ed)">
+          <organization>Ericsson</organization>
+          <address>
+            <postal>
+              <street>8400 boulevard Decarie</street>
+              <city>Montreal, QC H4P 2N2</city>
+              <country>Canada</country>
+            </postal>
+            <!-- <phone>+33 1 45 29 60 52</phone> -->
+            <email>daniel.migault@ericsson.com</email>
+          </address>
+        </author>
 
-    <author fullname="Daniel Migault" initials="D." surname="Migault (Ed)">
-      <organization>Ericsson</organization>
-      <address>
-        <postal>
-          <street>8400 boulevard Decarie</street>
-          <city>Montreal, QC H4P 2N2</city>
-          <country>Canada</country>
-        </postal>
-        <!-- <phone>+33 1 45 29 60 52</phone> -->
-        <email>daniel.migault@ericsson.com</email>
-      </address>
-    </author>
-    <author fullname="Wouter Cloetens" initials="W." surname="Cloetens">
-      <organization>SoftAtHome</organization>
-      <address>
-        <postal>
-          <street>vaartdijk 3 701</street>
-          <city>3018 Wijgmaal</city>
-          <country>Belgium</country>
-        </postal>
-        <phone/>
-        <email>wouter.cloetens@softathome.com</email>
-      </address>
-    </author>
+	<author fullname="Tomek Mrugalski" initials="T." surname="Mrugalski">
+	  <organization abbrev="ISC">Internet Systems Consortium, Inc.</organization>
+	  <address>
+	    <postal>
+	      <street>950 Charter Street</street>
+	      <city>Redwood City</city>
+	      <region>CA</region>
+	      <code>94063</code>
+	      <country>USA</country>
+	    </postal>
+	    <phone>+1 650 423 1345</phone>
+	    <email>tomasz.mrugalski@gmail.com</email>
+            <uri>http://www.isc.org</uri>
+	  </address>
+	</author>
+   
 
-    <author fullname="Chris Griffiths" initials="C." surname="Griffiths">
-      <organization>Dyn</organization>
-      <address>
-        <postal>
-          <street>150 Dow Street</street>
-          <city>Manchester</city>
-          <region>NH</region>
-          <code>03101</code>
-          <country>US</country>
-        </postal>
-        <phone/>
-        <facsimile/>
-        <email>cgriffiths@dyn.com</email>
-        <uri>http://dyn.com</uri>
-      </address>
-    </author>
+        <author fullname="Chris Griffiths" initials="C." surname="Griffiths">
+          <address>
+            <email>cgriffiths@gmail.com</email>
+          </address>
+        </author>
 
    <author fullname="Ralf Weber" initials="R." surname="Weber">
-      <organization>Nominum</organization>
-      <address>
-        <postal>
-          <street>2000 Seaport Blvd #400</street>
-          <city>Redwood City</city>
-          <region>CA</region>
-          <code>94063</code>
-          <country>US</country>
-        </postal>
-        <phone/>
-        <facsimile/>
-        <email>ralf.weber@nominum.com</email>
-        <uri>http://www.nominum.com</uri>
-      </address>
-    </author>
+          <organization>Nominum</organization>
+          <address>
+            <postal>
+              <street>2000 Seaport Blvd #400</street>
+              <city>Redwood City</city>
+              <region>CA</region>
+              <code>94063</code>
+              <country>US</country>
+            </postal>
+            <phone/>
+            <facsimile/>
+            <email>ralf.weber@nominum.com</email>
+            <uri>http://www.nominum.com</uri>
+          </address>
+        </author>
+
+        <author fullname="Wouter Cloetens" initials="W." surname="Cloetens">
+          <organization>SoftAtHome</organization>
+          <address>
+            <postal>
+              <street>vaartdijk 3 701</street>
+              <city>3018 Wijgmaal</city>
+              <country>Belgium</country>
+            </postal>
+            <phone/>
+            <email>wouter.cloetens@softathome.com</email>
+          </address>
+        </author>
+
+        <date></date>
+        <area>INTERNET</area>
+        <workgroup>HOMENET</workgroup>
+
+            <abstract>
+                <t>Customer Premises Equipment (CPE) devices are usually constrained devices with reduced network and CPU capacities. As such, a CPE exposing the authoritative naming service for its home network on the Internet may become vulnerable to resource exhaustion attacks. One way to avoid exposing CPE is to outsource the authoritative service to a third party. This third party can be the ISP or any other independent third party.</t>
+
+                <t>Outsourcing the authoritative naming service to a third party requires setting up an architecture which may be inappropriate for most end users. To leverage this issue, this document proposes DHCPv6 options so any agnostic CPE can automatically proceed to the appropriate configuration and outsource the authoritative naming service for the home network. This document shows that in most cases, these DHCPv6 options make outsourcing to a third party (be it the ISP or any ISP independent service provider) transparent for the end user. </t>
+            </abstract>
+        </front>
+        <middle>
+
+        <section title="Requirements notation">
+            <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in <xref target="RFC2119"/>.</t>
+        </section>
+
+        <section title="Terminology">
+        <t>
+          The reader is expected to be familiar with <xref target="I-D.ietf-homenet-front-end-naming-delegation"/> and its terminology section. This section defines terms that have not been defined in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>
+            <list hangIndent="6" style="hanging">
+                <t hangText="- Client Public Key: ">designates a public key generated by the CPE. This key is used as an authentication credential for the CPE.</t>
+                <t hangText="- Homenet Zone Template: ">The template used as a basis to generate the Homenet Zone.</t>
+                <t hangText="- DNS Template Server: ">The DNS server that hosts the Homenet Zone Template.</t>
+                <t hangText="- Homenet Reverse Zone: ">The reverse zone file associated to the Homenet Zone.</t>
+            </list>
+        </t>
+        </section>
+
+            <section title="Introduction">
+                <t>CPEs are usually constrained devices with reduced network and CPU capacities. As such, a CPE hosting on the Internet the authoritative naming service for its home network may become vulnerable to resource exhaustion attacks. Outsourcing the authoritative service to a third party avoids exposing the CPE to such attacks. This third party can be the ISP or any other independent third party.</t>
+
+                <t>Outsourcing the authoritative naming service to a third party requires setting up an architecture designated in this document as the Outsourcing Infrastructure. These settings  may be inappropriate for most end users that do not have the sufficient knowledge. To address this issue, this document proposes DHCPv6 Options so any agnostic CPE can automatically set the Outsourcing Infrastructure. In most cases, these DHCP Options are sufficient and do not require any additional interaction from the end user, thus achieving a zero-config settings. In some other cases, the end user is expected to perform some limited manual configuration.  </t>
+
+                <t>When the CPE is plugged, the DHCP Options described in the document enable:
+            <list hangIndent="6" style="hanging">
+                <t hangText="- 1. ">To build the Homenet Zone: Building the Homenet Zone requires filling the zone with appropriated bindings such as bindings between the  names and the IP addresses of the different devices of the home networks. How the CPE is aware of these binding is out of scope of the document.  They may  be provided, for example, by the DHCP Server hosted on the CPE. On the other hand, building the Homenet Zone also requires configuration parameters like the name of the Registered Domain Name associated to the home network or the Public Authoritative Server(s) the Homenet Zone is outsourced to. These configuration parameters are stored in the Homenet Zone Template. This document describes the DHCP Zone Template Option which carries the FQDN associated to the Homenet Zone Template. In order to retrieve the Homenet Zone Template, the CPE sends a query of type AXFR <xref target="RFC1034"/>, <xref target="RFC5936"/>.</t>
+                <t hangText="- 2. ">To upload the Homenet Zone to the Synchronization Server,  in charge of publishing the Homenet Zone on the Public Authoritative Server(s). This document describes the DHCP Synchronization Server Option that provides the FQDN of the appropriated server. Note that, the document does not consider whether the Homenet Zone is signed or not, and if signed, which entity is responsible to sign it. Such questions are out of the scope of the current document.</t>
+                <t hangText="- 3. ">To upload the Homenet Reverse Zone to the Reverse Synchronization Server in charge of publishing the Homenet Reverse Zone on the Reverse Public Authoritative Server(s). This document describes the DHCP Reverse Synchronization Server Option that provides the FQDN of the appropriated server. Similarly to item 2., we do not consider in this document if the Homenet Reverse Zone is signed or not, and if signed who signs it.</t>   
+               <t hangText="- 4. ">To provide authentication credential (a public key) to the DHCP Server: Information stored in the Homenet Zone Template, the Homenet Zone and Homenet Reverse Zone belongs to the CPE, and only the CPE should be able to update or upload these zones. To authenticate the CPE, this document defines the Client Public Key Option. This option is sent by the CPE to the DHCP Server and provides the Client Public Key the CPE uses to authenticate itself. This document does not describe mechanisms used to transmit the Client Public Key from the DHCP server to the appropriate entities. If the DHCP Server is not able to provide the Client Public Key to the appropriated entities, then the end user is likely to provide manually the Client Public Key to these entities. This document illustrates two scenarios: one where the DHCP server is responsible for distributing the Client Public Key to the Synchronization Servers and Reverse Synchronization Server. In the other scenarios, the Client Public Key is distributed out of band. </t>
+            </list>
+        </t>
+
+        <t>The DHCP Options described in this document make possible to configure an Outsourcing Infrastructure with no or little configurations from the end user. A zero-config setting is achieved if the the link between the CPE and the DHCP Server and  the link between the DHCP Server and the various DNS servers (Homenet Zone Server, the Reverse Synchronization Server, Synchronization Server) are trusted. For example, one way to provide a thrustworhy connection between the CPE and the DHCP server is defined in <xref target="I-D.ietf-dhc-sedhcpv6" />. When both links are trusted, the CPE is able to provide its authentication credentials (a Client Public Key) to the DHCP Server, that in turn forwards it to the various DNS servers. With the authentication credentials on the DNS servers, the CPE is able to securely update.</t>
+
+<t>If the DHCP Server cannot provide the Client Public Key to one of these servers (most likely the Synchronization Server) and the CPE needs to interact with the server, then, the end user is expected to provide the CPE's Client Public Key to these servers (the Reverse Synchronization Server or the Synchronization Server) either manually or using other mechanisms. Such mechanisms are outside the scope of this document. In that case, the authentication credentials need to be provided every time the key is modified. <xref target="sec-scenario"/> provides more details on how different scenarios impact the end users.</t>
 
 
-
-   <!--  <date month="July" year="2012"></date> -->
-    <date></date>
-    <area>INTERNET</area>
-    <workgroup>HOMENET</workgroup>
-
-        <abstract>
-            <t>CPEs are usually constraint devices with reduced network and CPU capacities. As such, a CPE hosting on the Internet the authoritative naming service for its home network may become vulnerable to resource exhaustion attacks. One way to avoid exposing CPE is to outsource the authoritative service to a third party. This third party can be the ISP or any other independent third party.</t>
-
-            <t>Outsourcing the authoritative naming service to a third party requires setting up an architecture which may be unappropriated for most end users. To leverage this issue, this document proposes DHCP Options so any agnostic CPE can automatically proceed to the appropriated configuration and outsource the authoritative naming service for the home network. This document shows that in most cases, these DHCP Options make outsourcing to a third party (be it the ISP or any ISP independent service provider) transparent for the end user. </t>
-        </abstract>
-    </front>
-    <middle>
-
-    <section title="Requirements notation">
-        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in <xref target="RFC2119"/>.</t>
-    </section>
-
-    <section title="Terminology">
-    <t>
-        <list hangIndent="6" style="hanging">
-            <t hangText="- Customer Premises Equipment: ">(CPE) is the router providing connectivity to the home network. It is configured and managed by the end user. In this document, the CPE might also hosts services such as DHCPv6. This device might be provided by the ISP.</t>
-            <t hangText="- Public Key: ">designates a public Key generated by the CPE. This key is used as an authentication credential for the CPE.</t>
-            <t hangText="- Registered Homenet Domain: "> is the Domain Name associated to the home network.</t>
-            <t hangText="- DNS Homenet Zone: ">is the DNS zone associated to the home network. This zone is set by the CPE and essentially contains the bindings between names and IP addresses of the nodes of the home network. In this document, the CPE does neither perform any DNSSEC management operations such as zone signing nor provide an authoritative service for the zone. Both are delegated to the Public Authoritative Server. The CPE synchronizes the DNS Homenet Zone with the Public Authoritative Server via a hidden primary / secondary architecture. The Public Authoritative Server might use specific servers for the synchronization of the DNS Homenet Zone: the Public Authoritative Name Server Set.</t>
-            <t hangText="- DNS Homenet Zone Template: ">The template used as a basis to generate the DNS Homenet Zone.</t>
-            <t hangText="- DNS Template Server: ">The DNS server that hosts the DNS Homenet Zone Template.</t>
-            <t hangText="- DNS Homenet Reverse Zone: ">The reverse zone file associated to the DNS Homenet Zone.</t>
-            <t hangText="- Public Authoritative Primary(ies): "> are the visible name server hosting the DNS Homenet Zone. End users' resolutions for the Homenet Domain are sent to this server, and this server is a primary for the zone.</t>
-            <t hangText="- Public Authoritative Name Server Set: ">is the server the CPE synchronizes the DNS Homenet Zone. It is configured as a secondary and the CPE acts as primary. The CPE sends information so the DNSSEC zone can be set and served.</t>
-            <t hangText="- Reverse Public Authoritative Primary(ies): "> are the visible name server hosting the DNS Homenet Reverse Zone. End users' resolutions for the Homenet Domain are sent to this server, and this server is a primary for the zone.</t>
-            <t hangText="- Reverse Public Authoritative Name Server Set: ">is the server the CPE synchronizes the DNS Homenet Reverse Zone. It is configured as a secondary and the CPE acts as primary. The CPE sends information so the DNSSEC zone can be set and served.</t>
-        </list>
-    </t>
-    </section>
-
-        <section title="Introduction">
-            <t>CPEs are usually constraint devices with reduced network and CPU capacities. As such, a CPE hosting on the Internet the authoritative naming service for its home network may become vulnerable to resource exhaustion attacks. One way to avoid exposing CPE is to outsource the authoritative service to a third party. This third party can be the ISP or any other independent third party.</t>
-
-            <t>Outsourcing the authoritative naming service to a third party requires setting up an architecture which may be unappropriated for most end users. To leverage this issue, this document proposes DHCP Options so any agnostic CPE can automatically proceed to the appropriated configuration and outsource the authoritative naming service for the home network. This document shows that in most cases, these DHCP Options make outsourcing to a third party (be it the ISP or any ISP independent service provider) transparent for the end user. </t>
-
-            <t>When the CPE is plugged, the DHCP Options described in the document enable the CPE:
-        <list hangIndent="6" style="hanging">
-            <t hangText="- 1. ">To build the DNS Homenet Zone: Building the DNS Homenet Zone requires filling the zone with appropriated bindings likes name / IP addresses of the different devices in the home networks. Such information can be provided for example by the DHCP Server hosted on the CPE. On the other hand, it also requires configuration parameters like the name of the Registered Domain Name associated to the home network or the Public Authoritative Primary(ies) the DNS Homenet Zone is outsourced to. These configuration parameters are stored in the DNS Homenet Zone Template. This document describes the DHCP Zone Template Option. This option carries a DNS Homenet Zone Template FQDN. In order to retrieve the DNS Homenet Zone Template, the CPE sends a query of type AXFR <xref target="RFC1034"/> <xref target="RFC5936"/>for the DNS Homenet Zone Template FQDN.</t>
-            <t hangText="- 2. ">To upload the DNS(SEC) Homenet Zone to the appropriated server: This server is designated as the Public Authoritative Name Server Set. It is in charge of publishing the DNS(SEC) Homenet Zone on the Public Authoritative Primary(ies). This document describes the DHCP Public Authoritative Name Server Set Option that provides the FQDN of the appropriated server. Note that, in the document we do not consider whether the DNS(SEC) Homenet Zone is signed or not and if signed who signs it. Such questions are out of the scope of the current document.</t>
-            <t hangText="- 3. ">To upload the DNS Homenet Reverse Zone to the appropriated server: This server is designated as the Reverse Public Authoritative Name Server Set. It is in charge of publishing the DNS Homenet Reverse Zone on the Reverse Public Authoritative Primary(ies). This document describes the DHCP Reverse Public Authoritative Name Server Set Option that provides the FQDN of the appropriated server. Similarly to item 2., we do not consider in this document if the DNS Homenet Reverse Zone is signed or not, and if signed who signs it.</t>   
-           <t hangText="- 4. ">To provide authentication credential (a public key) to the DHCP Server: Information stored in the DNS Homenet Zone Template, the DNS(SEC) Homenet Zone and DNS Homenet Reverse Zone belongs to the CPE, and only the CPE should be able to update or upload these zones. To authenticate the CPE, this document defines the DHCP Public Key Option. This option is sent by the CPE to the DHCP Server and provides the Public Key the CPE uses to authenticate itself. The DHCP Server is then responsible to provide the Public Key to the various DNS servers.</t> 
-        </list>
-    </t>
-
-    <t>As a result, the DHCP Options described in this document enable an agnostic CPE to outsource its naming infrastructure without any configuration from the end user. The main reason no configuration is required by the end user is that there are privileged links: first between the CPE and the DHCP Server and then between the DHCP Server and the various DNS servers (DNS Homenet Zone Server, the Reverse Public Authoritative Name Server Set, Public Authoritative Name Server Set). This enables the CPE to send its authentication credentials (a Public Key) to the DHCP Server that in turn forward it to the various DNS servers. With the authentication credential on the DNS servers set, the CPE is able to update the various zones in a secure way.</t>
-
-<t>If the DHCP Server cannot provide the public key to one of these servers (most likely the Public Authoritative Name Server Set) and the CPE needs to interact with the server, then, the end user is expected to provide the CPE's public key to these servers (the Reverse Public Authoritative Name Server Set or the Public Authoritative Name Server Set) either manually or using other mechanisms. Such mechanisms are outside the scope of this document. In that case, the authentication credentials need to be provided every time the key is modified. <xref target="sec-scenario"/> provides more details on how different scenarios impact the end users.</t> 
-
-
-<t>The remaining of this document is as follows. <xref target="sec-overview"/> provides an overview of the DHCP Options as well as the expected interactions between the CPE and the various involved entities. This section also provides an overview of available mechanisms to secure DNS transactions and update DNS Data. <xref target="sec-cpe-configuration"/> describes how the CPE may securely synchronize and update DNS data. <xref target="sec-format"/> describes the payload of the DHCP Options and <xref target="sec-dhcp-behavior"/> details how DHCP Client DHCP Server and DHCP Relay behave. <xref target="sec-iana"/> lists the new parameters to be registered at the IANA, <xref target="security-considerations"/> provides security considerations. Finally, <xref target="sec-scenario"/> describes how the CPE may behave and be configured regarding various scenarios.</t>  
+<t>The remaining of this document is as follows. <xref target="sec-overview"/> provides an overview of the DHCP Options as well as the expected interactions between the CPE and the various involved entities. This section also provides an overview of available mechanisms to secure DNS transactions and update DNS data. <xref target="sec-cpe-configuration"/> describes how the CPE may securely synchronize and update DNS data. <xref target="sec-format"/> describes the payload of the DHCP Options and <xref target="sec-dhcp-behavior"/> details how DHCP Client DHCP Server and DHCP Relay behave. <xref target="sec-iana"/> lists the new parameters to be registered at the IANA, <xref target="security-considerations"/> provides security considerations. Finally, <xref target="sec-scenario"/> describes how the CPE may behave and be configured regarding various scenarios.</t>  
 </section>
 
-    <section anchor="sec-overview" title="Protocol Overview">
-        <t>This section provides an overview of the how the CPE is expect to interact with various entities, as well as how the CPE is expected to be configured via DHCP Options. <xref target="sec-arch"/> describes the entities the CPE is expected to interact with. Interaction with each entities is defined via DHCP Options that are expected to configure the CPE. Once configured, the CPE is expected to be able to update some DNS Data hosted by the different entities. As a result security and updating mechanisms play an important role in the specification. <xref target="sec-sec-exchange"/> provides an overview of the different security mechanisms considered for securing the CPE transactions and <xref target="sec-update"/> considers the different update mechanisms considered for the CPE to update the DNS Data.</t>
+        <section anchor="sec-overview" title="Protocol Overview">
 
-        <section anchor="sec-arch" title="Architecture and DHCP Options Overview">
+            <t>This section provides an overview of the CPE's interactions with the Outsourcing Infrastructure in <xref target="sec-arch"/>, and so the necessary for its setting. In this document, the configuration is provided via DHCP Options. Once configured, the CPE is expected to be able to update and publish DNS data on the different components of the Outsourcing Infrastructure. As a result authenticating and updating mechanisms play an important role in the specification. <xref target="sec-sec-exchange"/> provides an overview of the different authentication methods and <xref target="sec-update"/> provides an overview of the different update mechanisms considered to update the DNS data.</t>
 
-    <t>This section illustrates how a CPE configures its naming infrastructure to outsource its authoritative naming service. All configurations and settings are performed using DHCP Options. This section, for the sake of simplicity, assumes that the DHCP Server is able to communicate to the various DNS servers and to provide them the public key associated to the CPE. Once each server got the public key, the CPE can proceed to updates in a authenticated and secure way.</t>
+            <section anchor="sec-arch" title="Architecture and DHCP Options Overview">
 
-    <t>This scenario has been chosen as it is believed to be the most popular scenario. This document does not ignore that scenarios where the DHCP Server does not have privileged relations with the Public Authoritative Name Server Set must be considered. These cases are discussed latter in <xref target="sec-scenario"/>. Such scenario does not necessarily require configuration for the end user and can also be Zero Config.</t>
+        <t>This section illustrates how a CPE receives the necessary information via DHCP Options to outsource its authoritative naming service on the Outsourcing Infrastructure. For the sake of simplicity, this section assumes that the DHCP server is able to communicate to the various DNS servers and to provide them the public key associated with the CPE. Once each server got the public key, the CPE can proceed to transactions in an authenticated and secure way.</t>
 
-    <t>The scenario is represented in <xref target="fig-protocol-overview"/>. 
-        <list hangIndent="6" style="hanging">
-            <t hangText="- 1: ">The CPE provides its Public Key to the DHCP Server using a DHCP Public Key Option (OPTION_PUBLIC_KEY) and sends a DHCP Option Request Option (ORO) for the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE), the DHCP Public Authoritative Name Server Set Option  (OPTION_NAME_SERVER_SET) and the DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET).</t>
-            <t hangText="- 2: ">The DHCP Server makes the Public Key available to the DNS servers, so the CPE can secure its DNS transactions. Note that the Public Key alone is not sufficient to perform the authentication and the key should be, for example, associated with an identifier, or the concerned domain name. How the binding is performed is out of scope of the document. It can be a centralized database or various bindings may be sent to the different servers. <xref target="fig-protocol-overview"/> represents the specific case were the DHCP Server forwards the set (Public Key, Zone Template FQDN) to the DNS Template Server, the set (Public Key, IPv6 subnet) to the Reverse Public Authoritative Name Server Set and the set (Public Key, Registered Homenet Domain) to the Public Authoritative Name Server Set.</t>
-            <t hangText="- 3.: ">The DHCP Server responds to the CPE with the requested DHCP Options, i.e. the DHCP Public Key Option (OPTION_PUBLIC_KEY), DHCP Zone Template Option OPTION_DNS_ZONE_TEMPLATE, DHCP Public Authoritative Name Server Set Option (OPTION_NAME_SERVER_SET), DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET).</t>
-            <t hangText="- 4.: ">Upon receiving the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE), the CPE performs an AXFR DNS query for the Zone Template FQDN. The exchange is secured according to the security protocols defined in the Security field of the DHCP option. Once the CPE has retrieved the DNS Zone Template, the CPE can build the DNS Homenet Zone and the DNS Homenet Reverse Zone. Eventually the CPE signs these zones.</t>
-            <t hangText="- 5.: ">Once the DNS(SEC) Homenet Reverse Zone has been set, the CPE uploads the zone to the Reverse Public Authoritative Name Server Set. The DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET) provides the Reverse Public Authoritative Name Server Set FQDN as well as the upload method, and the security protocol to secure the upload.</t>
-            <t hangText="- 6.: ">Once the DNS(SEC) Homenet Zone has been set, the CPE uploads the zone to the Public Authoritative Name Server Set. The DHCP Public Authoritative Name Server Set Option (OPTION_NAME_SERVER_SET) provides the Public Authoritative Name Server Set FQDN as well as the upload method and the security protocol to secure the upload.</t>
-    </list>
-    </t>
+        <t>This scenario has been chosen as it is believed to be the most popular scenario. This document does not ignore that scenarios where the DHCP Server does not have privileged relations with the Synchronization Server must be considered. These cases are discussed latter in <xref target="sec-scenario"/>. Such scenario does not necessarily require configuration for the end user and can also be zero-config.</t>
 
-     <figure title="Protocol Overview" anchor="fig-protocol-overview">
-        <artwork><![CDATA[
+        <t>The scenario is represented in <xref target="fig-protocol-overview"/>.
+            <list hangIndent="6" style="hanging">
+                <t hangText="- 1: ">The CPE provides its Client Public Key to the DHCP Server using a Client Public Key Option (OPTION_PUBLIC_KEY) and includes the following option codes in its
+its Option Request Option (ORO): DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE), the DHCP Synchronization Server Option  (OPTION_SYNC_SERVER) and the DHCP Reverse Synchronization Server Option (OPTION_REVERSE_SYNC_SERVER).</t>
+                <t hangText="- 2: ">The DHCP Server makes the Client Public Key available to the DNS servers, so the CPE can secure its DNS transactions. How the Client Public Key is transmitted to the various DNS servers is out of scope of this document. Note that the Client Public Key alone is not sufficient to perform the authentication and the key should be, for example, associated with an identifier, or the concerned domain name. How the binding is performed is out of scope of the document. It can be a centralized database or various bindings may be sent to the different servers. <xref target="fig-protocol-overview"/> represents the specific case where the DHCP Server forwards the set ( Client Public Key, Zone Template FQDN) to the DNS Template Server, the set ( Client Public Key, IPv6 subnet) to the Reverse Synchronization Server and the set ( Client Public Key, Registered Homenet Domain) to the Synchronization Server.</t>
+                <t hangText="- 3.: ">The DHCP Server responds to the CPE with the requested DHCP Options, i.e. the Client Public Key Option (OPTION_PUBLIC_KEY), DHCP Zone Template Option OPTION_DNS_ZONE_TEMPLATE, DHCP Synchronization Server Option (OPTION_SYNC_SERVER), DHCP Reverse Synchronization Server Option (OPTION_REVERSE_SYNC_SERVER). Note that this step may be performed in parallel to step 2, or even before. In other words, there is no requirements that step 3 is proceeded after step 2.</t>
+                <t hangText="- 4.: ">Upon receiving the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE), the CPE performs an AXFR DNS query for the Zone Template FQDN. The exchange is authenticated  according to the authentication methods defined in the Supported Authentication Methods field of the DHCP option. Once the CPE has retrieved the DNS Zone Template, the CPE can build the Homenet Zone and the Homenet Reverse Zone. Eventually the CPE signs these zones.</t>
+                <t hangText="- 5.: ">Once the Homenet Reverse Zone has been set, the CPE uploads the zone to the Reverse Synchronization Server. The DHCP Reverse Synchronization Server Option (OPTION_REVERSE_SYNC_SERVER) provides the Reverse Synchronization Server FQDN as well as the upload method, and the Supported Authentication Methods protocol to secure the upload.</t>
+                <t hangText="- 6.: ">Once the Homenet Zone has been set, the CPE uploads the zone to the Synchronization Server. The DHCP Synchronization Server Option (OPTION_SYNC_SERVER) provides the Synchronization Server FQDN as well as the upload method and the authentication method to secure the upload.</t>
+        </list>
+        </t>
+
+         <figure title="Protocol Overview" anchor="fig-protocol-overview">
+            <artwork><![CDATA[
    +----------------------+
-   |     DHCP Server      |
+   |    DHCP Server       |
    +----------------------+
-         ^   ^         ^
-         |   |         |2.
-       1.|   |3.       |
-         v   v         |
+        ^   ^          ^
+        |   |          |2.
+      1.|   |3.        |
+        v   v          |
         +------+       |    +--------------------------------+
         |      |  4.   +--->|  DNS Template Server           |
         |      |<---------->|                                |
         |      |       |    +--------------------------------+
         | CPE  |       |
         |      |       |    +--------------------------------+
-        |      | 5./6. +--->|  Reverse Public Authoritative  |
-        |      |<---------->|  Name Server Set               |
+        |      | 5./6. +--->|  Reverse Synchronization       |
+        |      |<---------->|  Server                        |
         |      |       |    +--------------------------------+
  -------|      |-------|--------------------------------------
         |      |       |    +--------------------------------+
-        +------+       +--->|  Public Authoritative          |
-                            |  Name Server Set               |
+        +------+       +--->|  Synchronization Server        |
+                            |                                |
                             +--------------------------------+
 ]]></artwork>
-      </figure>
+          </figure>
 
 
 
 
 
-    <t>As described above, the CPE is likely to interact with various DNS content. This section is focused on DNS Data the CPE is likely to update. More specifically, the CPE is likely to update the: 
-        <list hangIndent="6" style="hanging">
-            <t hangText="- DNS Homenet Zone Template: ">may be updated by the CPE if the configuration of the zone may be changed. This can include additional Public Authoritative Primary(ies), a different Registered Homenet Domain as the one initially proposed, or a redirection to another domain.</t>
-            <t hangText="- DNS Homenet Reverse Zone: ">may be updated every time a new device is connected or dis-connected.</t>
-            <t hangText="- DNS Homenet Zone: ">may be updated every time a new device is connected, dis-connected.</t>
-        </list>
-    </t> 
+        <t>As described above, the CPE is likely to interact with various DNS content. More specifically, the CPE is likely to update the:
+            <list hangIndent="6" style="hanging">
+                <t hangText="- Homenet Zone Template: "> if the configuration of the zone may be changed. This may include additional Public Authoritative Server(s), a different Registered Homenet Domain as the one initially proposed, or a redirection to another domain.</t>
+                <t hangText="- Homenet Reverse Zone: ">every time a new device is connected or dis-connected.</t>
+                <t hangText="- Homenet Zone: ">every time a new device is connected, dis-connected.</t>
+            </list>
+        </t>
 
-    <t>In fact, the CPE must be able to perform these updates in a secure manner. There are multiple ways to secure a DNS transaction and this document considers two mechanisms to update a DNS Data (nsupdate and primary/secondary synchronization). Which security mechanism to use to secure a DNS transaction depends on the expected security (authentication of the authoritative server, mutual authentication, confidentiality...). The expected security may also depends on the kind of transaction performed by the CPE. <xref target="sec-sec-exchange"/> describes the different security mechanisms considered in the document as well as their respective goals.  Which mechanism to use to update the DNS Data depends on the kind of update. Frequency of the update, size of the DNS Data to update may be some useful criteria. <xref target="sec-update"/> positions the nsupdate and primary/secondary synchronization mechanisms.</t>
-        </section>
+<t> Step 2 and step 3 should be considered as independent steps and could be re-ordered. In fact, the DHCP Server does not have to wait for a confirmation from the DNS servers the Client Public Key has been properly received, and is operational by the DNS servers. The DHCP Server is expected to reply upon receiving the Client Public Key Option. The reply to the Client Public Key Option from the DHCP Server is interpreted by the DHCP Client as a confirmation to the reception of the option by the DHCP Server only. Debugging configurations errors or transmission error with one of the DNS servers is let to the CPE and thus is outside of the scope of the DHCP. 
+First, it is unlikely a DNS server can validate that the Client Public Key will be operational for the CPE, as multiple causes of errors could occur. For example, the Client Public Key may have been changed during the transmission or by the DHCP Server, or the DNS server may be misconfigured. 
+Second, the number of error codes would be too complex. In addition to multiple causes of errors, multiple architectures and multiple DNS servers may be involved. 
+Third, this may cause significant DHCP Server performance degradation.
+</t>
 
-        <section anchor="sec-sec-exchange" title="Mechanisms Securing DNS Transactions">
+        <t>In fact, the CPE performs these updates in a secure manner. There are multiple ways to secure a DNS transaction and this document considers two mechanisms:nsupdate and primary/secondary synchronization. <xref target="sec-sec-exchange"/>  describes the authentication method that may be use to secure the DNS transactions of the CPE. The appropriate authentication methods may, for example, be chosen according to the level of confidentiality or the level of authentication requested by the CPE transactions.  <xref target="sec-update"/> positions the nsupdate and primary/secondary synchronization mechanisms. The update appropriate update mechanism  may depend on the for example on the update frequency or the size of the DNS data to update.</t>   
+         </section>
 
-    <t>Multiple protocols like IPsec <xref target="RFC4301"/> or TLS / DTLS <xref target="RFC5246"/> / <xref target="RFC6347"/> may be used to secure DNS transactions between the CPE and the DNS servers. This document restricts the scope of security protocols to those that have been designed specifically for DNS. This includes DNSSEC <xref target="RFC4033"/>, <xref target="RFC4034"/>, <xref target="RFC4035"/> that authenticates and provides integrity protection of DNS data, TSIG <xref target="RFC2845"/>, <xref target="RFC2930"/> that use a shared secret to secure a transaction between two end points and SIG(0) <xref target="RFC2931"/> authenticates the DNS packet exchanged.</t> 
+            <section anchor="sec-sec-exchange" title="Mechanisms Securing DNS Transactions">
 
-    <t>The key issue with TSIG is that a shared secret must be negotiated between the CPE and the server. On the other hand, TSIG performs symmetric cryptography which is light in comparison with asymmetric cryptography used by SIG(0). As a result, over large zone transfer, TSIG may be preferred to SIG(0).</t>
+        <t>Multiple protocols like IPsec <xref target="RFC4301"/> or TLS / DTLS <xref target="RFC5246"/> / <xref target="RFC6347"/> may be used to secure DNS transactions between the CPE and the DNS servers. This document limits its scope to authentication method that have been designed specifically for DNS. This includes DNSSEC <xref target="RFC4033"/>, <xref target="RFC4034"/>, <xref target="RFC4035"/> that authenticates and provides integrity protection of DNS data, TSIG <xref target="RFC2845"/>, <xref target="RFC2930"/> that use a shared secret to secure a transaction between two end points and SIG(0) <xref target="RFC2931"/> authenticates the DNS packet exchanged.</t>
 
-    <t>This document does not provides means to distribute shared secret for example using a specific DHCP Option. The only assumption made is that the CPE generates or is assigned a public key.</t>
+        <t>The key issue with TSIG is that a shared secret must be negotiated between the CPE and the server. On the other hand, TSIG performs symmetric cryptography which is light in comparison with asymmetric cryptography used by SIG(0). As a result, over large zone transfer, TSIG may be preferred to SIG(0).</t>
 
-    <t>As a result, when the document specifies the transaction is secured with TSIG, it means that either the CPE and the DNS Server have been manually configured with a shared secret, or the shared secret has been negotiated using TKEY <xref target="RFC2930"/>, and the TKEY exchanged are secured with SIG(0).</t>
+        <t>This document does not provide means to distribute shared secret for example using a specific DHCP Option. The only assumption made is that the CPE generates or is assigned a public key.</t>
 
-    <t>Exchange with the DNS Template Server to retrieve the DNS Homenet Zone Template may be protected by SIG(0), TSIG or DNSSEC. When DNSSEC is used, it means the DNS Template Server only provides integrity protection, and does not necessarily prevents someone else to query the DNS Homenet Zone Template. In addition, DNSSEC is only a way to protect the AXFR queries transaction, in other words, DNSSEC cannot be used to secure updates. If DNSSEC is used to provide integrity protection for the AXFR response, the CPE should proceed to the DNSSEC signature checks. If signature check fails, it MUST reject the response. If the signature check succeeds, the CPE removes all DNSSEC related RRsets (DNSKEY, RRSIG, NSEC* ...) before building the DNS Homenet Zone. In fact, these DNSSEC related fields are associated to the DNS Homenet Zone Template and not the DNS Homenet Zone.</t>
+        <t>As a result, when the document specifies the transaction is secured with TSIG, it means that either the CPE and the DNS server have been manually configured with a shared secret, or the shared secret has been negotiated using TKEY <xref target="RFC2930"/>, and the TKEY exchanged are secured with SIG(0).</t>
+
+        <t>Exchanges with the DNS Template Server to retrieve the Homenet Zone Template may be protected by SIG(0), TSIG or DNSSEC. When DNSSEC is used, it means the DNS Template Server only provides integrity protection, and does not necessarily prevent someone else to query the Homenet Zone Template. In addition, DNSSEC is only a way to protect the AXFR queries transaction, in other words, DNSSEC cannot be used to secure updates. If DNSSEC is used to provide integrity protection for the AXFR response, the CPE should proceed to the DNSSEC signature checks. If signature check fails, it MUST reject the response. If the signature check succeeds, the CPE removes all DNSSEC related RRsets (DNSKEY, RRSIG, NSEC* ...) before building the Homenet Zone. In fact, these DNSSEC related fields are associated to the Homenet Zone Template and not the Homenet Zone.</t>
  
-    <t>Any update exchange should use SIG(0) or TSIG to authenticate the exchange.</t>
+        <t>Any update exchange should use SIG(0) or TSIG to authenticate the exchange.</t>
    
-        </section>    
+            </section>    
 
-        <section anchor="sec-update" title="Primary / Secondary Synchronization versus DNS Update">
+            <section anchor="sec-update" title="Primary / Secondary Synchronization versus DNS Update">
 
-    <t>As updates only concern DNS zones, this document only considers DNS update mechanisms such as DNS update  <xref target="RFC2136"/>  <xref target="RFC3007"/> or a primary / secondary synchronization.</t>
+        <t>As updates only concern DNS zones, this document only considers DNS update mechanisms such as DNS update  <xref target="RFC2136"/>  <xref target="RFC3007"/> or a primary / secondary synchronization.</t>
 
-    <t>The DNS Homenet Zone Template can only be updated with DNS update. The reason is that the DNS Homenet Zone Template contains static configuration data that is not expected to evolve over time.</t>
+        <t>The Homenet Zone Template SHOULD be updated with DNS update as it  contains static configuration data that is not expected to evolve over time.</t>
 
-    <t>The DNS Homenet Reverse Zone and the DNS Homenet Zone can be updated either with DNS update or using a primary / secondary synchronization. As these zones may be large, with frequent updates, we recommend to use the primary / secondary architecture as described in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>. The primary / secondary mechanism is preferred as it better scales and avoids DoS attacks: First the primary notifies the secondary the zone must be updated, and leaves the secondary to proceed to the update when possible. Then, the NOTIFY message sent by the primary is a small packet that is less likely to load the secondary. At last, the AXFR query performed by the secondary is a small packet sent over TCP (section 4.2 <xref target="RFC5936"/>) which makes unlikely the secondary to perform reflection attacks with a forged NOTIFY. On the other hand, DNS updates can use UDP, packets require more processing then a NOTIFY, and they do not provide the server the opportunity to post-pone the update.</t>
-
-        </section>
-
-    </section>
-
-    <section anchor="sec-cpe-configuration" title="CPE Configuration">
-
-            <section anchor="sec-cpe-ms-settings" title="CPE Primary / Secondary Synchronization Configurations">
-
-        <t>The primary / secondary architecture is described in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>. The CPE is configured as a primary whereas the DNS Server is configured as a secondary. The DNS Server represents the Public Authoritative Name Server Set or the Reverse Public Authoritative Name Server Set.</t>
-
-        <t>When the CPE is plugged its IP address may be unknown to the secondary. The section details how the CPE or primary communicate the necessary information to set up the secondary.</t>
-
-        <t>In order to set the primary / secondary configuration, both primary and secondaries must agree on 1) the zone to be synchronized, 2) the IP address and ports used by both primary and secondary.</t>
-
-
-            <section anchor="sec-cpe-nsset" title="CPE / Public Authoritative Name Server Set">
-
-        <t>The CPE knows the zone to be synchronized by reading the Registered Homenet Domain in the DNS Homenet Zone Template provided by the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE). The IP address of the secondary is provided by the DHCP Public Authoritative Name Server Set Option  (OPTION_NAME_SERVER_SET).</t>
-
-       <t>The Public Authoritative Name Server Set has been configured with the Registered Homenet Domain and the Public Key that identifies the CPE. The only thing missing is the IP address of the CPE. This IP address is provided by the CPE by sending a NOTIFY <xref target="RFC1996"/>.</t>
-
-       <t>When the CPE has built its DNS Homenet Zone, it sends a NOTIFY message to the Public Authoritative Name Server Sets. Upon receiving the NOTIFY message, the secondary reads the Registered Homenet Domain and checks the NOTIFY is sent by the authorized primary. This can be done using the shared secret (TSIG) or the public key (SIG(0)). Once the NOTIFY has been authenticated, the Public Authoritative Name Server Sets might consider the source IP address of the NOTIFY query to configure the primaries attributes.</t>
+        <t>The Homenet Reverse Zone and the Homenet Zone can be updated either with DNS update or using a primary / secondary synchronization. As these zones may be large, with frequent updates, we recommend to use the primary / secondary architecture as described in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>. The primary / secondary mechanism is preferred as it better scales and avoids DoS attacks: First the primary notifies the secondary the zone must be updated, and leaves the secondary to proceed to the update when possible. Then, the NOTIFY message sent by the primary is a small packet that is less likely to load the secondary. At last, the AXFR query performed by the secondary is a small packet sent over TCP (section 4.2 <xref target="RFC5936"/>) which makes unlikely the secondary to perform reflection attacks with a forged NOTIFY. On the other hand, DNS updates can use UDP, packets require more processing than a NOTIFY, and they do not provide the server the opportunity to postpone the update.</t>
 
             </section>
 
-
-            <section title="CPE / Reverse Public Authoritative Name Server Set">
-   
-        <t>The CPE knows the zone to be synchronized by looking at its assigned prefix. The IP address of the secondary is provided by the DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET).</t> 
-
-        <t>Configuration of the secondary is performed as illustrated in <xref target="sec-cpe-nsset"/>.</t>
-         
-            </section>
         </section>
 
+        <section anchor="sec-cpe-configuration" title="CPE Configuration">
+
+                <section anchor="sec-cpe-ms-settings" title="CPE Primary / Secondary Synchronization Configurations">
+
+            <t>The primary / secondary architecture is described in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>. The CPE hosts a Hidden Primary that synchronizes with a  Synchronization Server or the Reverse Synchronization Server.</t>
+
+            <t>When the CPE is plugged its IP address may be unknown to the secondary. The section details how the CPE or primary communicates the necessary information to set up the secondary.</t>
+
+            <t>In order to set the primary / secondary configuration, both primary and secondaries must agree on 1) the zone to be synchronized, 2) the IP address and ports used by both primary and secondary.</t>
+
+
+                <section anchor="sec-cpe-nsset" title="CPE / Synchronization Server">
+
+            <t>The CPE is aware of  the zone to be synchronized by reading the Registered Homenet Domain in the Homenet Zone Template provided by the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE). The IP address of the secondary is provided by the DHCP Synchronization Server Option  (OPTION_SYNC_SERVER).</t>
+
+           <t>The Synchronization Server has been configured with the Registered Homenet Domain and the Client Public Key that identifies the CPE. The only missing information is the IP address of the CPE. This IP address is provided by the CPE by sending a NOTIFY <xref target="RFC1996"/>.</t>
+
+           <t>When the CPE has built its Homenet Zone, it sends a NOTIFY message to the Synchronization Servers. Upon receiving the NOTIFY message, the secondary reads the Registered Homenet Domain and checks the NOTIFY is sent by the authorized primary. This can be done using the shared secret (TSIG) or the public key (SIG(0)). Once the NOTIFY has been authenticated, the Synchronization Servers might consider the source IP address of the NOTIFY query to configure the primaries attributes.</t>
+
+                </section>
+
+
+                <section title="CPE / Reverse Synchronization Server">
+   
+            <t>The CPE is aware of  the zone to be synchronized by looking at its assigned prefix. The IP address of the secondary is provided by the DHCP Reverse Synchronization Server Option (OPTION_REVERSE_SYNC_SERVER).</t>
+
+            <t>Configuration of the secondary is performed as illustrated in <xref target="sec-cpe-nsset"/>.</t>
+             
+                </section>
+            </section>
+
 
  
-    <section anchor="sec-cpe-updates" title="CPE DNS Data Handling and Update Policies">
-          <section title="DNS Homenet Zone Template">
+        <section anchor="sec-cpe-updates" title="CPE DNS Data Handling and Update Policies">
+              <section title="Homenet Zone Template">
  
-             <t>The DNS Homenet Zone Template contains at least the related fields of the Public Authoritative Primary(ies) as well as the Homenet Registered Domain, that is SOA, and NS fields. This template might be generated automatically by the owner of the DHCP Server. For example, an ISP might provide a default Homenet Registered Domain as well as default Public Authoritative Primary(ies). This default settings should provide the CPE the necessary pieces of information to set the homenet naming architecture.</t>
+                 <t>The Homenet Zone Template contains at least the related fields of the Public Authoritative Server(s) as well as the Homenet Registered Domain, that is SOA, and NS fields. This template might be generated automatically by the owner of the DHCP Server. For example, an ISP might provide a default Homenet Registered Domain as well as default Public Authoritative Server(s). This default settings should provide the CPE the necessary pieces of information to set the homenet naming architecture.</t>
 
-              <t>If the DNS Homenet Zone Template is not subject to modifications or updates, the owner of the template might only use DNSSEC to enable integrity check. </t>
+                  <t>If the Homenet Zone Template is not subject to modifications or updates, the owner of the template might only use DNSSEC to enable integrity check. </t>
 
-              <t>The DNS Homenet Zone Template might be subject to modification by the CPE. The advantage of using the standard DNS zone format is that standard DNS update mechanism can be used to perform updates. These updates might be accepted or rejected by the owner of the DNS Homenet Zone Template. Policies that defines what is accepted or rejected is out of scope of this document. However, in this document we assume the Registered Homenet Domain is used as an index by the Public Authoritative Name Server Set, and SIG(0), TSIG are used to authenticate the CPE. As a result, the Registered Homenet Domain should not be modified unless the Public Authoritative Name Server Set can handle with it.</t>
-          </section>
+                  <t>On the other hand, the Homenet Zone Template might also be subject to modification by the CPE. The advantage of using the standard DNS zone format is that standard DNS update mechanism can be used to perform updates. These updates might be accepted or rejected by the owner of the Homenet Zone Template. Policies that defines what is accepted or rejected is out of scope of this document. However, this document assumes the Registered Homenet Domain is used as an index by the Synchronization Server, and SIG(0), TSIG are used to authenticate the CPE. As a result, the Registered Homenet Domain should not be modified unless the Synchronization Server can handle with it.</t>
+              </section>
 
-          <section title="DNS (Reverse) Homenet Zone">
-          <t>The DNS Homenet Zone might be generated from the DNS Homenet Zone Template. How the DNS Homenet Zone is generated is out of scope of this document. In some cases, the DNS Homenet Zone might be the exact copy of the DNS Homenet Zone Template. In other cases, it might be generated from the DNS Homenet Zone Template with additional RRsets. In some other cases, the DNS Homenet Zone might be generated without considering the DNS Homenet Zone Template, but only considering specific configuration rules.</t>
+              <section title="DNS (Reverse) Homenet Zone">
+              <t>The Homenet Zone might be generated from the Homenet Zone Template. How the Homenet Zone is generated is out of scope of this document. In some cases, the Homenet Zone might be the exact copy of the Homenet Zone Template. In other cases, it might be generated from the Homenet Zone Template with additional RRsets. In some other cases, the Homenet Zone might be generated without considering the Homenet Zone Template, but only considering specific configuration rules.</t>
 
-          <t>In the current document the CPE only sets a single zone that is associated with one single Homenet Registered Domain. The domain might be assigned by the owner of the DNS Homenet Zone Template. This constrain does not prevent the CPE to use multiple domain names. How additional domains are considered is out of scope of this document. One way to handle these additional zones is to configure static redirections to the DNS Homenet Zone using CNAME <xref target="RFC2181"/>, <xref target="RFC1034"/>, DNAME <xref target="RFC6672"/> or CNAME+DNAME <xref target="I-D.sury-dnsext-cname-dname"/>.</t>
-          </section>
+              <t>In the current document the CPE only sets a single zone that is associated with one single Homenet Registered Domain. The domain might be assigned by the owner of the Homenet Zone Template. This constraint does not prevent the CPE to use multiple domain names. How additional domains are considered is out of scope of this document. One way to handle these additional zones is to configure static redirections to the Homenet Zone using CNAME <xref target="RFC2181"/>, <xref target="RFC1034"/>, DNAME <xref target="RFC6672"/> or CNAME+DNAME <xref target="I-D.sury-dnsext-cname-dname"/>.</t>
+              </section>
 </section>
 </section>
 
-        <section anchor="sec-format" title="Payload Description">
+            <section anchor="sec-format" title="Payload Description">
 
-        <t>This section details the payload of the DHCP Options. A few DHCP Options are used to advertise a server the CPE may be expect to interact with. Interaction may require to define how the update is expected to be performed as well as how the communication is secured. Security and Update are shared by multiple DHCP Options and are described in separate sections. <xref target="sec-sec-field"/> describes the security field,  <xref target="sec-update-field"/> describes the update fields, the remaining sections <xref target="sec-key"/>,  <xref target="sec-zone-template"/>,  <xref target="sec-auth-ns-set"/>,  <xref target="sec-auth-rns"/> describe the DHCP Options.</t>  
+            <t>This section details the payload of the DHCP Options. A few DHCP Options are used to advertise a server the CPE may be expected to interact with. Interaction may require to define update and authentication methods. and Update fields are shared by multiple DHCP Options and are described in separate sections. <xref target="sec-sec-field"/> describes the Supported Authentication Method field,  <xref target="sec-update-field"/> describes the Update field, the remaining <xref target="sec-key"/>,  <xref target="sec-zone-template"/>,  <xref target="sec-auth-ns-set"/>,  <xref target="sec-auth-rns"/> describe the DHCP Options.</t>  
 
-        <section anchor="sec-sec-field" title="Security Field">
-        <t>The Security Field of the DHCP Option is represented in <xref target="fig-sec-field"/>. It indicates the security mechanism supported by the DNS Server. One of these mechanism MUST be chosen by the CPE in order to perform a transaction with the DNS server. See <xref target="sec-sec-exchange"/> for more details.</t>
-                <figure title="Security Field" anchor="fig-sec-field">
-                    <artwork>
- 0                   1              
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 
+            <section anchor="sec-sec-field" title="Supported Authentication Methods Field">
+            <t>The Supported Authentication Methods field of the DHCP Option represented in <xref target="fig-sec-field"/> indicates the authentication method supported by the DNS server. One of these mechanism MUST be chosen by the CPE in order to perform a transaction with the DNS server. See <xref target="sec-sec-exchange"/> for more details.</t>
+                    <figure title="Supported Authentication Methods Filed" anchor="fig-sec-field">
+                        <artwork>
+ 0                   1                  
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|            Security           |                               
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+                               
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- DNS (Bit 0): ">indicates, when set to 1, that DNS without any security extension is supported.</t>
-                    <t hangText="- DNSSEC (Bit 1): ">indicates, when set to 1, that DNSSEC provides integrity protection. This can only be used for read operations like retrieving the DNS Homenet Zone Template.</t>
-                    <t hangText="- SIG(0) (Bit 2): ">indicates, when set to 1, that transaction protected by SIG(0) are supported.</t>
-                    <t hangText="- TSIG (Bit 3): ">indicates, when set to 1, that transaction using TSIG is supported. Note that if a shared secret has not been previously negotiated between the two party, it should be negotiated using TKEY. The TKEY exchanges MUST be protected with SIG(0) even though SIG(0) is not supported.</t>
-                    <t hangText="- Remaining Bits (Bit 4-15): "> MUST be set to 0 by the DHCP Server and ignored by the DHCP Client.</t> 
-        </list>
-        </t>
+|    Supported Auth. Methods    |                                   
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+                                   
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- DNS (Bit 0): ">indicates, when set to 1, that DNS without any security extension is supported.</t>
+                        <t hangText="- DNSSEC (Bit 1): ">indicates, when set to 1, that DNSSEC provides integrity protection. This can only be used for read operations like retrieving the Homenet Zone Template.</t>
+                        <t hangText="- SIG(0) (Bit 2): ">indicates, when set to 1, that transaction protected by SIG(0) are supported.</t>
+                        <t hangText="- TSIG (Bit 3): ">indicates, when set to 1, that transaction using TSIG is supported. Note that if a shared secret has not been previously negotiated between the two party, it should be negotiated using TKEY. The TKEY exchanges MUST be protected with SIG(0) even though SIG(0) is not supported.</t>
+                        <t hangText="- Remaining Bits (Bit 4-15): "> MUST be set to 0 by the DHCP Server and ignored by the DHCP Client.</t>
+            </list>
+            </t>
 
-        <t>A Security field with all bits set to zero indicates the operation is not permitted. The Security field may be set to zero when updates operations are not permitted for the DNS Homenet Template. In any other case this is an error.</t>
+            <t>A Supported Authentication Methods field with all bits set to zero indicates the operation is not permitted. The Supported Authentication Methods field may be set to zero when updates operations are not permitted for the DNS Homenet Template. In any other case this is an error.</t>
  
-        </section>
+            </section>
 
-        <section title="Update Field" anchor="sec-update-field">
-        <t>The Update Field of the DHCP Option is represented in <xref target="fig-update-field"/>. It indicates the update mechanism supported by the DNS server. See <xref target="sec-update"/> for more details.</t> 
+            <section title="Update Field" anchor="sec-update-field">
+            <t>The Update Field of the DHCP Option is represented in <xref target="fig-update-field"/>. It indicates the update mechanism supported by the DNS server. See <xref target="sec-update"/> for more details.</t>
 
-                <figure title="Update Field" anchor="fig-update-field">
-                    <artwork>
- 0                             
- 0 1 2 3 4 5 6 7 
+                    <figure title="Update Field" anchor="fig-update-field">
+                        <artwork>
+ 0                                 
+ 0 1 2 3 4 5 6 7
 +-+-+-+-+-+-+-+-+
-|    Update     |                                       
-+-+-+-+-+-+-+-+-+                             
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- Primary / Secondary (Bit 0): ">indicates, when set to 1, that DNS Server supports data synchronization using a Primary / Secondary mechanism.</t>
-                    <t hangText="- DNS Update (Bit 1): ">indicates, when set to 1, that DNS Server supports data synchronization using DNS Updates.</t>
+|    Update     |                                           
++-+-+-+-+-+-+-+-+                                 
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- Primary / Secondary (Bit 0): ">indicates, when set to 1, that DNS Server supports data synchronization using a Primary / Secondary mechanism.</t>
+                        <t hangText="- DNS Update (Bit 1): ">indicates, when set to 1, that DNS Server supports data synchronization using DNS Updates.</t>
 
-                    <t hangText="- Remaining Bits (Bit 2-7): "> MUST be set to 0 by the DHCP Server and ignored by the DHCP Client.</t> 
-        </list>
-        </t>
+                        <t hangText="- Remaining Bits (Bit 2-7): "> MUST be set to 0 by the DHCP Server and ignored by the DHCP Client.</t>
+            </list>
+            </t>
 
-        </section>
+            </section>
 
-        <section anchor="sec-key" title="DHCP Public Key Option">
-        <t>The DHCP Public Key Option (OPTION_PUBLIC_KEY) indicates the Public Key that is used to authenticate the CPE.</t>
+            <section anchor="sec-key" title="Client Public Key Option">
+            <t>The Client Public Key Option (OPTION_PUBLIC_KEY) indicates the Client Public Key that is used to authenticate the CPE. This option is defined in <xref target="I-D.ietf-dhc-sedhcpv6"/>.</t>
 
-                <figure title="DHCP Public Key Option" anchor="fig-public-key">
-                    <artwork>
+<!--
+                    <figure title="Client Public Key Option" anchor="fig-public-key">
+                        <artwork>
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|       OPTION_PUBLIC_KEY       |          option-len           |
+|     OPTION_PUBLIC_KEY         |         option-len            |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                                                               |
-/                      Public Key Data                          /
+/                        Public Key Data                        /
 |                                                               |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- OPTION_PUBLIC_KEY (variable):"> the option code for the DHCP Public Key Option.</t>
-                    <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
-                    <t hangText="- Public Key Data:"> contains the Public Key. The format is the DNSKEY RDATA format as defined in <xref target="RFC4034"/>.</t>  
-                </list>
-        </t>
-        </section>
-        <section anchor="sec-zone-template" title="DHCP Zone Template Option">
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- OPTION_PUBLIC_KEY:"> the option code for the Client Public Key Option (TBD1).</t>
+                        <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
+                        <t hangText="- Client Public Key Data:"> contains the Client Public Key. The format is the DNSKEY RDATA format as defined in <xref target="RFC4034"/>.</t>  
+                    </list>
+            </t>
+-->
+            </section>
+            <section anchor="sec-zone-template" title="DHCP Zone Template Option">
 
-        <t>The DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE) Option indicates the CPE how to retrieve the DNS Homenet Zone Template. It provides a FQDN the CPE SHOULD query with a DNS query of type AXFR. The option also specifies which security protocols are available on the authoritative server. DNS Homenet Zone Template update, if permitted MUST use the DNS Update mechanism.</t>
+            <t>The DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE) Option indicates the CPE how to retrieve the Homenet Zone Template. It provides a FQDN the CPE SHOULD query with a DNS query of type AXFR as well as the authentication methods associated to the AXFR query or the nsupdate queries. Homenet Zone Template update, if permitted MUST use the DNS Update mechanism.</t>
 
-                <figure title="DHCP Zone Template Option" anchor="fig-zone-template">
-                    <artwork>
+                    <figure title="DHCP Zone Template Option" anchor="fig-zone-template">
+                        <artwork>
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |    OPTION_DNS_ZONE_TEMPLATE   |          option-len           |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|       Security  (axfr)        |            Security           |
+| Supp. Auth. Methods (axfr)    | Supp. Auth. Methods (update)  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                                                               |
-/                    Zone Template FQDN                         /
+/                        Zone Template FQDN                     /
 |                                                               |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- OPTION_DNS_ZONE_TEMPLATE (variable):"> the option code for the DHCP Zone Template Option.</t>
-                    <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
-                    <t hangText="- Security (axfr) (16 bits):"> defines which security protocols are supported by the DNS server. This field concerns the AXFR and consultation queries, not the update queries. See <xref target="sec-sec-field"/> for more details.</t> 
-                    <t hangText="- Security (16 bits):"> defines which security protocols are supported by the DNS server. This field concerns the update. See <xref target="sec-sec-field"/> for more details.</t> 
-                    <t hangText="- Zone Template FQDN FQDN (variable):">the FQDN of the DNS server hosting the DNS Homenet Zone Template.</t>
-                 </list>
-            </t>
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- OPTION_DNS_ZONE_TEMPLATE (variable):"> the option code for the DHCP Zone Template Option (TBD2).</t>
+                        <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
+                        <t hangText="- Supported Authentication Methods(axfr) (16 bits):"> defines which authentication methods are supported by the DNS server. This field concerns the AXFR and consultation queries, not the update queries. See <xref target="sec-sec-field"/> for more details.</t>
+                        <t hangText="- Supported Authentication Methods(16 bits):"> defines which authentication methods are supported by the DNS server. This field concerns the update. See <xref target="sec-sec-field"/> for more details.</t>
+                        <t hangText="- Zone Template FQDN FQDN (variable):">the FQDN of the DNS server hosting the Homenet Zone Template.</t>
+                     </list>
+                </t>
 
-        </section>
+            </section>
 
-        <section anchor="sec-auth-ns-set" title="DHCP Public Authoritative Name Server Set Option">
+            <section anchor="sec-auth-ns-set" title="DHCP Synchronization Server Option">
 
-        <t>The DHCP Public Authoritative Name Server Set Option (OPTION_NAME_SERVER_SET) provides information so the CPE can upload the DNS Homenet Zone to the Public Authoritative Name Server Set. Finally, the option provides the security mechanisms that are available to perform the upload. The upload is performed via a DNS primary / secondary architecture or DNS updates.</t>
-                <figure title="DHCP Public Authoritative Name Server Set Option" anchor="fig-name-srv-set">
-                    <artwork>
+            <t>The DHCP Synchronization Server Option (OPTION_SYNC_SERVER) provides information necessary for the CPE to upload the Homenet Zone to the Synchronization Server. Finally, the option provides the authentication methods that are available to perform the upload. The upload is performed via a DNS primary / secondary architecture or DNS updates.</t>
+                    <figure title="DHCP Synchronization Server Option" anchor="fig-name-srv-set">
+                        <artwork>
+ 0                   1                        2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|        OPTION_SYNC_SERVER     |          option-len           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Supported Auth. Methods       |    Update     |     Server    /
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+/         Port    |                                             |
++-+-+-+-+-+-+-+-+-+                                             |
+|                                                               |
+/                    Synchronization Server FQDN                /
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- OPTION_SYNC_SERVER (16 bits):"> the option code for the DHCP Synchronization Server Option (TBD3).</t>
+                        <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
+                        <t hangText="- Supported Authentication Methods(16 bits):"> defines which authentication methods are supported by the DNS server. See <xref target="sec-sec-field"/> for more details.</t>
+                        <t hangText="- Update (8 bits):"> defines which update mechanisms are supported by the DNS server. See <xref target="sec-update"/> for more details.</t>
+                        <t hangText="- Server Port (16 bits):"> defines the port the Synchronization Server is listening. When multiple transport layers may be used, a single and unique Server Port value applies to all the transport layers. In the case of DNS for example, Server Port value considers DNS exchanges using UDP and TCP.</t>
+                         
+                        <t hangText="- Synchronization Server FQDN (variable):"> the FQDN of the Synchronization Server.</t>
+                     </list>
+                </t>
+
+ </section>
+
+            <section anchor="sec-auth-rns" title="DHCP Reverse Synchronization Server Option">
+            <t>The DHCP Reverse Synchronization Server Option (OPTION_REVERSE_SYNC_SERVER) provides information necessary for the CPE to upload the Homenet Zone to the Synchronization Server. The option provides the authentication methods that are available to perform the upload. The upload is performed via a DNS primary / secondary architecture or DNS updates.</t>
+                    <figure title="DHCP Reverse Synchronization Server Option" anchor="fig-rever-srv-name-set">
+                        <artwork>
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|    OPTION_NAME_SERVER_SET     |          option-len           |
+|  OPTION_REVERSE_SYNC_SERVER   |         option-len            |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|            Security           |    Update   |     Server      /
+| Supported Auth. Methods       |     Update    |   Server      /
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-/     Port        |                                             |
+/         Port    |                                             |
 +-+-+-+-+-+-+-+-+-+                                             |
 |                                                               |
-/           Public Authoritative Name Server Set FQDN           /
+/                Reverse Synchronization Server FQDN            /
 |                                                               |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- OPTION_NAME_SERVER_SET (16 bits):"> the option code for the DHCP Public Authoritative Name Server Set Option.</t>
-                    <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
-                    <t hangText="- Security (16 bits):"> defines which security protocols are supported by the DNS server. See <xref target="sec-sec-field"/> for more details.</t> 
-                    <t hangText="- Update (8 bits):"> defines which update mechanisms are supported by the DNS server. See <xref target="sec-update"/> for more details.</t>
-                    <t hangText="- Server Port (16 bits):"> defines the port the Public Authoritative Name Server Set is listening.</t> 
-                     
-                    <t hangText="- Public Authoritative Name Server Set FQDN (variable):"> the FQDN of the Public Authoritative Name Server Set.</t>
-                 </list>
-            </t>
+                 </artwork>
+                     </figure>
+               <t>
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- OPTION_REVERSE_SYNC_SERVER (16 bits):">the option code for the DHCP Reverse Synchronization Server Option (TBD4).</t>
+                        <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
+                        <t hangText="- Supported Authentication Methods(16 bits):"> defines which authentication methods are supported by the DNS server. See <xref target="sec-sec-field"/> for more details.</t>
+                        <t hangText="- Update (8 bits):"> defines which update mechanisms are supported by the DNS server. See <xref target="sec-update"/> for more details.</t>
+                        <t hangText="- Server Port (16 bits):"> defines the port the Synchronization Server is listening.</t>
+                        <t hangText="- Reverse Synchronization Server FQDN (variable):"> The FQDN of the Reverse Synchronization Server.</t>
+                     </list>
+                </t>
 
- </section> 
-
-        <section anchor="sec-auth-rns" title="DHCP Reverse Public Authoritative Name Server Set Option">
-        <t>The DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET) provides information so the CPE can upload the DNS Homenet Zone to the Public Authoritative Name Server Set. The option provides the security mechanisms that are available to perform the upload. The upload is performed via a DNS primary / secondary architecture or DNS updates.</t>
-                <figure title="DHCP Reverse Public Authoritative Name Server Set Option" anchor="fig-rever-srv-name-set">
-                    <artwork>
- 0                   1                   2                   3
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-| OPTION_REVERSE_NAME_SERVER_SET|          option-len           |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|            Security           |    Update   |     Server      /
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-/     Port        |                                             |
-+-+-+-+-+-+-+-+-+-+                                             |
-|                                                               |
-/      Reverse Public Authoritative Name Server Set FQDN        /
-|                                                               |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-             </artwork>
-                 </figure>
-           <t>
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- OPTION_REVERSE_NAME_SERVER_SET (16 bits):">the option code for the DHCP Reverse Public Authoritative Name Server Set Option.</t>
-                    <t hangText="- option-len (16 bits):"> length in octets of the option-data field as described in <xref target="RFC3315"/>.</t>
-                    <t hangText="- Security (16 bits):"> defines which security protocols are supported by the DNS server. See <xref target="sec-sec-field"/> for more details.</t> 
-                    <t hangText="- Update (8 bits):"> defines which update mechanisms are supported by the DNS server. See <xref target="sec-update"/> for more details.</t> 
-                    <t hangText="- Server Port (16 bits):"> defines the port the Public Authoritative Name Server Set is listening.</t> 
-                    <t hangText="- Reverse Public Authoritative Name Server Set FQDN (variable):"> The FQDN of the Reverse Public Authoritative Name Server Set.</t>
-                 </list>
-            </t>
-
-     </section> 
-    </section>
-
-
-        <section anchor="sec-dhcp-behavior" title="DHCP Behavior">
-
-        <section title="DHCPv6 Server Behavior">
-       
-        <t>The DHCP Server sends the DHCP Zone Template Option (OPTION_DNS_ZONE_TEMPLATE), DHCP Public Authoritative Name Server Set Option (OPTION_NAME_SERVER_SET), DHCP Reverse Public Authoritative Name Server Set Option (OPTION_REVERSE_NAME_SERVER_SET) upon request by the DHCP Client.</t> 
-
-        <t>The DHCP Server MAY receive a DHCP Public Key Option (OPTION_PUBLIC_KEY) from the CPE. Upon receipt of this DHCP Option, the DHCP Sever is expect to communicate this credential to the available DNS Servers like the DNS Template Server, the Public Authoritative Name Server Set and the Reverse Public Authoritative Name Server Set.</t>
-        </section>
-
-        <section title="DHCPv6 Client Behavior">
-
-        <t> The DHCP Client MAY send a DHCP Public Key Option (OPTION_PUBLIC_KEY) to the DHCP Server. This Public Key authenticates the CPE.</t>
-        <t>The DHCP Client sends a DHCP Option Request Option (ORO) with the necessary DHCP options.</t>
-        <t>A CPE SHOULD only send the an ORO request for DHCP Options it needs or for information that needs to be up-to-date.</t>
-        <t>Upon receiving a DHCP option described in this document, the CPE SHOULD retrieve or update DNS zones using the associated security and update protocols.</t> 
+         </section>
         </section>
 
 
-        <section anchor="sec-dhcp-relay" title="DHCPv6 Relay Behavior">
-        <t>DHCP Relay behavior are not modified by this document. </t>
+            <section anchor="sec-dhcp-behavior" title="DHCP Behavior">
+
+            <section title="DHCPv6 Server Behavior">
+           
+            <t>Sections 17.2.2 and 18.2 of <xref target="RFC3315"/> govern server operation in
+	    regards to option assignment.  As a convenience to the reader, we
+	    mention here that the server will send option foo only if configured
+	    with specific values for foo and if the client requested it. In particular,
+	    when configured the DHCP Server sends the DHCP Zone Template Option,
+	    DHCP Synchronization Server Option, DHCP Reverse Synchronization Server
+	    Option when requested by the DHCP Client by including necessary option
+	    codes in its Option Request Option.</t>
+
+            <t>The DHCP Server may receive a Client Public Key Option (OPTION_PUBLIC_KEY) from the CPE. Upon receipt of this DHCP Option, the DHCP Server SHOULD acknowledge the reception of the Client Public Key Option as described in <xref target="sec-arch"/> and communicate this credential to the available DNS Servers like the DNS Template Server, the Synchronization Server and the Reverse Synchronization Server, unless not configured to do so.</t>
+
+      <t>A CPE may update its Client Public Key by sending a new value in the Client Public Key Option (OPTION_PUBLIC_KEY) as this document assumes the link between the CPE and the DHCP Server is considered authenticated and trusted. The server SHOULD process received Client Public Key Option sent
+by the client (see step 2 in <xref target="sec-arch" />, unless not configured to do so.</t>
+            </section>
+
+            <section title="DHCPv6 Client Behavior">
+
+            <t> The DHCP Client SHOULD send a Client Public Key Option (OPTION_PUBLIC_KEY) to the DHCP Server. This Client Public Key authenticates the CPE.</t>
+            <t>The DHCP Client sends a DHCP Option Request Option with the necessary DHCP options: DHCP Zone Template Option, DHCP Synchronization Server Option and DHCP Reverse Synchronization Server Option.</t>
+	    <!-- tomek: removed this text. Client should always reuqest those options. That's a
+standard DHCP mechanism for the client to learn any changes to the network configuration.
+            <t>A CPE SHOULD only send the an ORO request for DHCP Options it needs or for information that needs to be up-to-date.</t> -->
+            <t>Upon receiving a DHCP option described in this document, the CPE SHOULD retrieve or update DNS zones using the associated Supported Authentication Methods and update protocols,
+	    as described in <xref target="sec-cpe-configuration"/>.</t>
+            </section>
+
+            <section anchor="sec-dhcp-relay" title="DHCPv6 Relay Agent Behavior">
+            <t>There are no additional requirements for the DHCP Relay agents.</t>
+            </section>
         </section>
-    </section>
 
 <section anchor="sec-iana" title="IANA Considerations">
 
 <t>The DHCP options detailed in this document is:
-    <list style="hanging" hangIndent="6">
-        <t hangText="- OPTION_DNS_ZONE_TEMPLATE:">TBD</t>
-        <t hangText="- OPTION_NAME_SERVER_SET:">TBD</t>
-        <t hangText="- OPTION_REVERSE_NAME_SERVER_SET:">TBD</t>
-        <t hangText="- OPTION_PUBLIC_KEY:">TBD</t>
-    </list>
+        <list style="hanging" hangIndent="6">
+            <t hangText="- OPTION_PUBLIC_KEY:">TBD1</t>
+            <t hangText="- OPTION_DNS_ZONE_TEMPLATE:">TBD2</t>
+            <t hangText="- OPTION_SYNC_SERVER:">TBD3</t>
+            <t hangText="- OPTION_REVERSE_SYNC_SERVER:">TBD4</t>
+        </list>
 </t>
 
 </section>
 
 <section title="Security Considerations" anchor="security-considerations">
 
-    <section title="DNSSEC is recommended to authenticate DNS hosted data">
-    <t>It is recommended that the (Reverse) DNS Homenet Zone is signed with DNSSEC. The zone may be signed by the CPE or by a third party. We recommend the zone to be signed by the CPE, and that the signed zone is uploaded.</t>  
-    </section>
+        <section title="DNSSEC is recommended to authenticate DNS hosted data">
+        <t>It is recommended that the (Reverse) Homenet Zone is signed with DNSSEC. The zone may be signed by the CPE or by a third party. We recommend the zone to be signed by the CPE, and that the signed zone is uploaded.</t>  
+        </section>
 
 
-    <section title="Channel between the CPE and ISP DHCP Server MUST be secured">
-    <t>The document considers that the channel between the CPE and the ISP DHCP Server is trusted. More specifically, the CPE is authenticated and the exchanged messages are protected. The current document does not specify how to secure the channel.  <xref target="RFC3315"/> proposes a DHCP authentication and message exchange protection, <xref target="RFC4301"/>, <xref target="RFC7296"/> propose to secure the channel at the IP layer.</t> 
-    <t>In fact, the channel MUST be secured because the CPE provides authentication credentials. Unsecured channel may result in CPE impersonation attacks.</t>
-    </section>
+        <section title="Channel between the CPE and ISP DHCP Server MUST be secured">
+<t>The channel MUST be secured because the CPE provides authentication credentials. Unsecured channel may result in CPE impersonation attacks.</t>
 
-   <section title="CPEs are sensitive to DoS"> 
+        <t>The document considers that the channel between the CPE and the ISP DHCP Server is trusted. More specifically, the CPE is authenticated and the exchanged messages are protected. The current document does not specify how to secure the channel.  <xref target="RFC3315"/> proposes a DHCP authentication and message exchange protection, <xref target="RFC4301"/>, <xref target="RFC7296"/> propose to secure the channel at the IP layer.</t>
+                </section>
+
+   <section title="CPEs are sensitive to DoS">
 <t>CPE have not been designed for handling heavy load.  The CPE are exposed on the Internet, and their IP address is publicly published on the Internet via the DNS. This makes the Home Network sensitive to Deny of Service Attacks. The resulting outsourcing architecture is described in <xref target="I-D.ietf-homenet-front-end-naming-delegation"/>. This document shows how the outsourcing architecture can be automatically set.</t>
    </section>
 
 </section>
 
 <section title="Acknowledgment">
-<t>We would like to thank Tomasz Mrugalski, Marcin Siodelski and Bernie Volz for their comments on the design of the DHCP Options. We would also like to thank Mark Andrews, Andrew Sullivan and Lorenzo Colliti for their remarks on the architecture design. The designed solution has been largely been inspired by Mark Andrews's document <xref target="I-D.andrews-dnsop-pd-reverse"/> as well as discussions with Mark.</t> 
+<t>We would like to thank Tomasz Mrugalski, Marcin Siodelski and Bernie Volz for their comments on the design of the DHCP Options. We would also like to thank Mark Andrews, Andrew Sullivan and Lorenzo Colliti for their remarks on the architecture design. The designed solution has been largely been inspired by Mark Andrews's document <xref target="I-D.andrews-dnsop-pd-reverse"/> as well as discussions with Mark. We also thank Ray Hunter for its reviews, its comments and for suggesting an appropriated terminology.</t>
 </section>
 
 
 
 
 </middle>
-    <back>
+        <back>
 
-        <references title="Normative References">
-             &rfc1034;
-             &rfc1996;
-             &rfc2119;
-             &rfc2136;
-             &rfc2181;
-             &rfc2845;
-             &rfc2930;
-             &rfc2931;
-             &rfc3007;
-             &rfc3315;
-             &rfc4033;
-             &rfc4034;
-             &rfc4035;
-             &rfc4301;
-             &rfc5246;
-             &rfc5936;
-             &rfc7296;
-             &rfc6672;
-             &rfc6347;
-        </references>
-        <references title="Informational References">
-             &I-D.sury-dnsext-cname-dname;
-             &I-D.ietf-homenet-front-end-naming-delegation;
-             &I-D.andrews-dnsop-pd-reverse; 
-        </references>
-        <section anchor="sec-scenario" title="Scenarios and impact on the End User">
-        <t>This section details various scenarios and discuss their impact on the end user.</t>
+            <references title="Normative References">
+                 &rfc1034;
+                 &rfc1996;
+                 &rfc2119;
+                 &rfc2136;
+                 &rfc2181;
+                 &rfc2845;
+                 &rfc2930;
+                 &rfc2931;
+                 &rfc3007;
+                 &rfc3315;
+                 &rfc4033;
+                 &rfc4034;
+                 &rfc4035;
+                 &rfc4301;
+                 &rfc5246;
+                 &rfc5936;
+                 &rfc7296;
+                 &rfc6672;
+                 &rfc6347;
+            </references>
+            <references title="Informational References">
+                 &I-D.sury-dnsext-cname-dname;
+                 &I-D.ietf-homenet-front-end-naming-delegation;
+                 &I-D.andrews-dnsop-pd-reverse;
+	         &I-D.ietf-dhc-sedhcpv6;
+            </references>
+            <section anchor="sec-scenario" title="Scenarios and impact on the End User">
+            <t>This section details various scenarios and discuss their impact on the end user.</t>
 
-        <section anchor="sec-scenario-1" title="Base Scenario">
-        <t>The base scenario is the one described in  <xref target="sec-overview"/>. It is typically the one of an ISP that manages the DHCP Server, and all DNS servers.</t>
+            <section anchor="sec-scenario-1" title="Base Scenario">
+            <t>The base scenario is the one described in  <xref target="sec-overview"/>. It is typically the one of an ISP that manages the DHCP Server, and all DNS servers.</t>
 
-        <t>The end user subscribes to the ISP (foo), and at subscription time registers for example.foo as its Registered Homenet Domain example.foo. Since the ISP knows the Registered Homenet Domain and the Public Authoritative Primary(ies) the ISP is able to build the DNS Homenet Zone Template.</t>
-        <t>The ISP manages the DNS Template Server, so it is able to load the DNS Homenet Zone Template on the DNS Template Server.</t>
+            <t>The end user subscribes to the ISP (foo), and at subscription time registers for example.foo as its Registered Homenet Domain example.foo. Since the ISP knows the Registered Homenet Domain and the Public Authoritative Server(s) the ISP is able to build the Homenet Zone Template.</t>
+            <t>The ISP manages the DNS Template Server, so it is able to load the Homenet Zone Template on the DNS Template Server.</t>
 
-        <t>When the CPE is plugged (at least the first time), it provides its Public Key to the DHCP Server. In this scenario, the DHCP Server and the DNS Servers are managed by the ISP so the DHCP Server can provide authentication credentials of the CPE to enable secure authenticated transaction between the CPE and these DNS servers. More specifically, credentials are provided to:
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- ">Public Authoritative Name Server Set</t>
-                    <t hangText="- ">Reverse Public Authoritative Name Server Set</t>
-                    <t hangText="- ">DNS Template Server</t>
-                </list>
-            </t>
+            <t>When the CPE is plugged (at least the first time), it provides its Client Public Key to the DHCP Server. In this scenario, the DHCP Server and the DNS Servers are managed by the ISP so the DHCP Server can provide authentication credentials of the CPE to enable secure authenticated transaction between the CPE and these DNS servers. More specifically, credentials are provided to:
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- ">Synchronization Server</t>
+                        <t hangText="- ">Reverse Synchronization Server</t>
+                        <t hangText="- ">DNS Template Server</t>
+                    </list>
+                </t>
 
-       <t>The CPE can update the zone using DNS update or a primary / secondary configuration in a secure way.</t>             
+           <t>The CPE can update the zone using DNS update or a primary / secondary configuration in a secure way.</t>                 
 
-        <t>The main advantage of this scenario is that the naming architecture is configured automatically and transparently for the end user.</t>
-        <t>The drawbacks are that the end user uses a Registered Homenet Domain managed by the ISP and that it relies on the ISP naming infrastructure.</t>
-        </section>
+            <t>The main advantage of this scenario is that the naming architecture is configured automatically and transparently for the end user.</t>
+            <t>The drawbacks are that the end user uses a Registered Homenet Domain managed by the ISP and that it relies on the ISP naming infrastructure.</t>
+            </section>
 
-        <section anchor="scenario-2" title="Third Party Registered Homenet Domain">
+            <section anchor="scenario-2" title="Third Party Registered Homenet Domain">
 
-        <t>This section considers the case when the end user wants its home network to use example.com as a Registered Homenet Domain instead of example.foo that has been assigned by the ISP. We also suppose that example.com is not managed by the ISP.</t>
+            <t>This section considers the case when the end user wants its home network to use example.com as a Registered Homenet Domain instead of example.foo that has been assigned by the ISP. We also suppose that example.com is not managed by the ISP.</t>
 
-        <t>This can also be achieved without any configuration. When the end user buys the domain name example.com, it may request to redirect the name example.com to example.foo using static redirection with CNAME <xref target="RFC2181"/>, <xref target="RFC1034"/>, DNAME <xref target="RFC6672"/> or CNAME+DNAME <xref target="I-D.sury-dnsext-cname-dname"/>.</t> 
+            <t>This can also be achieved without any configuration. When the end user buys the domain name example.com, it may request to redirect the name example.com to example.foo using static redirection with CNAME <xref target="RFC2181"/>, <xref target="RFC1034"/>, DNAME <xref target="RFC6672"/> or CNAME+DNAME <xref target="I-D.sury-dnsext-cname-dname"/>.</t>
 
-        <t>This configuration is performed once when the domain name example.com is registered. The only information the end user needs to know is the domain name assigned by the ISP. Once this configuration is done no additional configuration is needed anymore. More specifically, the CPE may be changed, the zone can be updated as in <xref target="sec-scenario-1"/> without any additional configuration from the end user.</t>
+            <t>This configuration is performed once when the domain name example.com is registered. The only information the end user needs to know is the domain name assigned by the ISP. Once this configuration is done no additional configuration is needed anymore. More specifically, the CPE may be changed, the zone can be updated as in <xref target="sec-scenario-1"/> without any additional configuration from the end user.</t>
 
-        <t>The main advantage of this scenario is that the end user benefits from the Zero Configuration of the Base Scenario <xref target="sec-scenario-1"/>. Then, the end user is able to register for its home network an unlimited number of domain names provided by an unlimited number of different third party providers.</t>
-       <t>The drawback of this scenario may be that the end user still rely on the ISP naming infrastructure. Note that the only case this may be inconvenient is when the DNS Servers provided by the ISPs results in high latency.</t>
-        </section>
-
-
-        <section anchor="scenario-3" title="Third Party DNS Infrastructure">
-     
-        <t>This scenario considers that the end user uses example.com as a Registered Homenet Domain, and does not want to rely on the authoritative servers provided by the ISP.</t>
-
-        <t>In this section we limit the outsourcing to the Public Authoritative Name Server Set and Public Authoritative Primary(ies) to a third party. All other DNS Servers DNS Template Server, Reverse Public Authoritative Primary(ies) and Reverse Public Authoritative Name Server Set remain managed by the ISP. The reason we consider that Reverse Public Authoritative Primary(ies) and Reverse Public Authoritative Name Server Set remains managed by the ISP are that the prefix is managed by the ISP, so outsourcing these resources requires some redirection agreement with the ISP. More specifically the ISP will need to configure the redirection on one of its Reverse DNS Servers. That said, outsourcing these resources is similar as outsourcing Public Authoritative Name Server Set and Public Authoritative Primary(ies) to a third party. Similarly, the DNS Template Server can be easily outsourced as detailed in this section</t>
+            <t>The main advantage of this scenario is that the end user benefits from the Zero Configuration of the Base Scenario <xref target="sec-scenario-1"/>. Then, the end user is able to register for its home network an unlimited number of domain names provided by an unlimited number of different third party providers.</t>
+           <t>The drawback of this scenario may be that the end user still rely on the ISP naming infrastructure. Note that the only case this may be inconvenient is when the DNS Servers provided by the ISPs results in high latency.</t>
+            </section>
 
 
-        <t>Outsourcing Public Authoritative Name Server Set and Public Authoritative Primary(ies) requires:
-                <list style="hanging" hangIndent="6">
-                    <t hangText="- 1) ">Updating the DNS Homenet Zone Template: this can be easily done as detailed in <xref target="sec-update"/> as the DNS Template Server is still managed by the ISP. Such modification can be performed once by any CPE. Once this modification has been performed, the CPE can be changed, the Public Key of the CPE may be changed, this does not need to be done another time. One can imagine a GUI on the CPE asking the end user to fill the field with Registered Homenet Domain, optionally Public Authoritative Primary(ies), with a button "Configure DNS Homenet Zone Template".</t>
-                    <t hangText="- 2) ">Updating the DHCP Server Information. In fact the Reverse Public Authoritative Name Server Set returned by the ISP is modified. One can imagine a GUI interface that enables the end user to modify its profile parameters. Again, this configuration update is done once-for-ever.</t>
-                    <t hangText="- 3) ">Upload the authentication credential of the CPE, that is the Public Key of the CPE, to the third party. Unless we use specific mechanisms, like communication between the DHCP Server and the third party, or a specific token that is plugged into the CPE, this operation is likely to be performed every time the CPE is changed, and every time the Public Key generated by the CPE is changed.</t>     
-                </list>
-         </t>
-         <t>The main advantage of this scenario is that the DNS infrastructure is completely outsourced to the third party. Most likely the Public Key that authenticate the CPE need to be configured for every CPE. Configuration is expected to be CPE live-long.</t>
-        </section>
+            <section anchor="scenario-3" title="Third Party DNS Infrastructure">
+         
+            <t>This scenario considers that the end user uses example.com as a Registered Homenet Domain, and does not want to rely on the authoritative servers provided by the ISP.</t>
 
-        <section anchor="scenario-4" title="Multiple ISPs">
-        <t>This scenario considers a CPE connected to multiple ISPs.</t>
+            <t>In this section we limit the outsourcing to the Synchronization Server and Public Authoritative Server(s) to a third party. All other DNS Servers DNS Template Server, Reverse Public Authoritative Server(s) and Reverse Synchronization Server remain managed by the ISP. The reason we consider that Reverse Public Authoritative Server(s) and Reverse Synchronization Server remains managed by the ISP are that the prefix is managed by the ISP, so outsourcing these resources requires some redirection agreement with the ISP. More specifically the ISP will need to configure the redirection on one of its Reverse DNS Servers. That said, outsourcing these resources is similar as outsourcing Synchronization Server and Public Authoritative Server(s) to a third party. Similarly, the DNS Template Server can be easily outsourced as detailed in this section</t>
 
-        <t>Firstly, suppose the CPE has been configured with the based scenarios exposed in <xref target="sec-scenario-1"/>. The CPE has multiple interfaces, one for each ISP, and each of these interface is configured using DHCP. The CPE sends to each ISP its DHCP Public Key Option as well as a request for a DHCP Zone Template Option, a DHCP Public Authoritative Name Server Set Option and a DHCP Reverse Public Authoritative Name Server Set Option. Each ISP provides the requested DHCP options, with different values. Note that this scenario assumes, the home network has a different Registered Homenet Domain for each ISP as it is managed by the ISP. On the other hand, the CPE Public Key may be shared between the CPE and the multiple ISPs. The CPE builds the associate DNS(SEC) Homenet Zone, and proceeds to the various settings as described in  <xref target="sec-scenario-1"/>.</t>
 
-        <t>The protocol and DHCP Options described in this document are fully compatible with a CPE connected to multiple ISPs with multiple Registered Homenet Domains. However, the CPE should be able to handle different Registered Homenet Domains. This is an implementation issue which is outside the scope of the current document. More specifically, multiple Registered Homenet Domains leads to multiple DNS(SEC) Homenet Zones. A basic implementation may erase the DNS(SEC) Homenet Zone that exists when it receives DHCP Options, and rebuild everything from scratch. This will work for an initial configuration but comes with a few drawbacks. First, updates to the DNS(SEC) Homenet Zone may only push to one of the multiple Registered Homenet Domain, the latest Registered Homenet Domain that has been set, and this is most likely expected to be almost randomly chosen as it may depend on the latency on each ISP network at the boot time. As a  results, this leads to unsynchronized Registered Homenet Domains. Secondly, if the CPE handles in some ways resolution, only the latest Registered Homenet Domain set may be able to provide naming resolution in case of network disruption.</t>
+            <t>Outsourcing Synchronization Server and Public Authoritative Server(s) requires:
+                    <list style="hanging" hangIndent="6">
+                        <t hangText="- 1) ">Updating the Homenet Zone Template: this can be easily done as detailed in <xref target="sec-update"/> as the DNS Template Server is still managed by the ISP. Such modification can be performed once by any CPE. Once this modification has been performed, the CPE can be changed, the Client Public Key of the CPE may be changed, this does not need to be done another time. One can imagine a GUI on the CPE asking the end user to fill the field with Registered Homenet Domain, optionally Public Authoritative Server(s), with a button "Configure Homenet Zone Template".</t>
+                        <t hangText="- 2) ">Updating the DHCP Server Information. In fact the Reverse Synchronization Server returned by the ISP is modified. One can imagine a GUI interface that enables the end user to modify its profile parameters. Again, this configuration update is done once-for-ever.</t>
+                        <t hangText="- 3) ">Upload the authentication credential of the CPE, that is the Client Public Key of the CPE, to the third party. Unless we use specific mechanisms, like communication between the DHCP Server and the third party, or a specific token that is plugged into the CPE, this operation is likely to be performed every time the CPE is changed, and every time the Client Public Key generated by the CPE is changed.</t>         
+                    </list>
+             </t>
+             <t>The main advantage of this scenario is that the DNS infrastructure is completely outsourced to the third party. Most likely the Client Public Key that authenticate the CPE need to be configured for every CPE. Configuration is expected to be CPE live-long.</t>
+            </section>
 
-        <t>Secondly, suppose the CPE is connected to multiple ISP with a single Registered Homenet Domain. In this case, the one party is chosen to host the Registered Homenet Domain. This entity may be one of the ISP or a third party. Note that having multiple ISPs can be motivated for bandwidth aggregation, or connectivity fail-over. In the case of connectivity fail-over, the fail-over concerns the access network and a failure of the access network may not impact the core network where the Public Authoritative Name Server Set and Public Authoritative Primaries are hosted. In that sense, choosing one of the ISP even in a scenario of multiple ISPs may make sense. However, for sake of simplicity, this scenario assumes that a third party has be chosen to host the Registered Homenet Domain. The DNS settings for each ISP is described in <xref target="scenario-2"/> and <xref target="scenario-3"/>. With the configuration described in <xref target="scenario-2"/>,  the CPE is expect to be able to handle multiple Homenet Registered Domain, as the third party redirect to one of the ISPs Servers. With the configuration described in <xref target="scenario-3"/>, DNS zone are hosted and maintained by the third party. A single DNS(SEC) Homenet Zone is built and maintained by the CPE. This latter configuration is likely to match most CPE implementations.</t>
+            <section anchor="scenario-4" title="Multiple ISPs">
+            <t>This scenario considers a CPE connected to multiple ISPs.</t>
 
-       <t>The protocol and DHCP Options described in this document are fully compatible with a CPE connected to multiple ISPs. To configure or not and how to configure the CPE depends on the CPE facilities.  <xref target="sec-scenario-1"/> and  <xref target="scenario-2"/> require the CPE to handle multiple Registered Homenet Domain, whereas <xref target="scenario-3"/> does not have such requirement.</t>  
+            <t>Firstly, suppose the CPE has been configured with the based scenarios exposed in <xref target="sec-scenario-1"/>. The CPE has multiple interfaces, one for each ISP, and each of these interface is configured using DHCP. The CPE sends to each ISP its Client Public Key Option as well as a request for a DHCP Zone Template Option, a DHCP Synchronization Server Option and a DHCP Reverse Synchronization Server Option. Each ISP provides the requested DHCP options, with different values. Note that this scenario assumes, the home network has a different Registered Homenet Domain for each ISP as it is managed by the ISP. On the other hand, the CPE Client Public Key may be shared between the CPE and the multiple ISPs. The CPE builds the associate DNS(SEC) Homenet Zone, and proceeds to the various settings as described in  <xref target="sec-scenario-1"/>.</t>
 
-        </section>
-        </section>
+            <t>The protocol and DHCP Options described in this document are fully compatible with a CPE connected to multiple ISPs with multiple Registered Homenet Domains. However, the CPE should be able to handle different Registered Homenet Domains. This is an implementation issue which is outside the scope of the current document. More specifically, multiple Registered Homenet Domains leads to multiple DNS(SEC) Homenet Zones. A basic implementation may erase the DNS(SEC) Homenet Zone that exists when it receives DHCP Options, and rebuild everything from scratch. This will work for an initial configuration but comes with a few drawbacks. First, updates to the DNS(SEC) Homenet Zone may only push to one of the multiple Registered Homenet Domain, the latest Registered Homenet Domain that has been set, and this is most likely expected to be almost randomly chosen as it may depend on the latency on each ISP network at the boot time. As a  results, this leads to unsynchronized Registered Homenet Domains. Secondly, if the CPE handles in some ways resolution, only the latest Registered Homenet Domain set may be able to provide naming resolution in case of network disruption.</t>
+
+            <t>Secondly, suppose the CPE is connected to multiple ISP with a single Registered Homenet Domain. In this case, the one party is chosen to host the Registered Homenet Domain. This entity may be one of the ISP or a third party. Note that having multiple ISPs can be motivated for bandwidth aggregation, or connectivity fail-over. In the case of connectivity fail-over, the fail-over concerns the access network and a failure of the access network may not impact the core network where the Synchronization Server and Public Authoritative Primaries are hosted. In that sense, choosing one of the ISP even in a scenario of multiple ISPs may make sense. However, for sake of simplicity, this scenario assumes that a third party has be chosen to host the Registered Homenet Domain. The DNS settings for each ISP is described in <xref target="scenario-2"/> and <xref target="scenario-3"/>. With the configuration described in <xref target="scenario-2"/>,  the CPE is expect to be able to handle multiple Homenet Registered Domain, as the third party redirect to one of the ISPs Servers. With the configuration described in <xref target="scenario-3"/>, DNS zone are hosted and maintained by the third party. A single DNS(SEC) Homenet Zone is built and maintained by the CPE. This latter configuration is likely to match most CPE implementations.</t>
+
+           <t>The protocol and DHCP Options described in this document are fully compatible with a CPE connected to multiple ISPs. To configure or not and how to configure the CPE depends on the CPE facilities.  <xref target="sec-scenario-1"/> and  <xref target="scenario-2"/> require the CPE to handle multiple Registered Homenet Domain, whereas <xref target="scenario-3"/> does not have such requirement.</t>  
+
+            </section>
+            </section>
 
 <section title="Document Change Log">
 <t>[RFC Editor: This section is to be removed before publication]</t>
-    <t>-05: changing Master to Primary, Slave to Secondary</t> 
-    <t>-04: Working Version 
-    Major modifications are:
-        <list style="hanging" hangIndent="6">
-            <t hangText="- Re-structuring the draft:"> description and comparison of update and security mechanisms have been intergrated into the Overview section. a Configuration section has been created to describe both configuration and corresponding behavior of the CPE.</t>
-            <t hangText="- Adding Ports parameters:"> Server Set can configure a port. The Port Server parameter have been added in the DHCP Option payloads because middle boxes may not be configured to let port 53 packets and it may also be useful to split servers among different ports, assigning each end user a different port. </t>
-            <t hangText="- Multiple ISP scenario:"> In order to address comments, the multiple ISPs scenario has been described to explicitly show that the protocol and DHCP Options do not prevent a CPE connected to multiple independent ISPs.</t>
-        </list>
-    </t>
+        <t>-05: changing Master to Primary, Slave to Secondary</t>
+        <t>-04: Working Version
+        Major modifications are:
+            <list style="hanging" hangIndent="6">
+                <t hangText="- Re-structuring the draft:"> description and comparison of update and authentication methods have been integrated into the Overview section. a Configuration section has been created to describe both configuration and corresponding behavior of the CPE.</t>
+                <t hangText="- Adding Ports parameters:"> Server Set can configure a port. The Port Server parameter have been added in the DHCP Option payloads because middle boxes may not be configured to let port 53 packets and it may also be useful to split servers among different ports, assigning each end user a different port. </t>
+                <t hangText="- Multiple ISP scenario:"> In order to address comments, the multiple ISPs scenario has been described to explicitly show that the protocol and DHCP Options do not prevent a CPE connected to multiple independent ISPs.</t>
+            </list>
+        </t>
 
-    <t>-03: Working Version 
-    Major modifications are:
-        <list style="hanging" hangIndent="6">
-            <t hangText="- Redesigning options/scope:"> according to feed backs received from the IETF89 presentation in the dhc WG.</t>
-            <t hangText="- Redesigning architecture:"> according to feed backs received from the IETF89 presentation in the homenet WG, discussion with Mark and Lorenzo.</t>
-        </list>
-    </t>
+        <t>-03: Working Version
+        Major modifications are:
+            <list style="hanging" hangIndent="6">
+                <t hangText="- Redesigning options/scope:"> according to feed backs received from the IETF89 presentation in the dhc WG.</t>
+                <t hangText="- Redesigning architecture:"> according to feed backs received from the IETF89 presentation in the homenet WG, discussion with Mark and Lorenzo.</t>
+            </list>
+        </t>
 
-    <t>-02: Working Version 
-    Major modifications are:
-        <list style="hanging" hangIndent="6">
-            <t hangText="- Redesigning options/scope:">As suggested by Bernie Volz</t>
-        </list>
-    </t>
+        <t>-02: Working Version
+        Major modifications are:
+            <list style="hanging" hangIndent="6">
+                <t hangText="- Redesigning options/scope:">As suggested by Bernie Volz</t>
+            </list>
+        </t>
 
-    <t>-01: Working Version 
-    Major modifications are:
-        <list style="hanging" hangIndent="6">
-            <t hangText="- Remove the DNS Zone file construction:">As suggested by Bernie Volz</t>
-            <t hangText="- DHCPv6 Client behavior:">Following options guide lines</t>
-            <t hangText="- DHCPv6 Server behavior:">Following options guide lines</t>
-        </list>
-    </t>
+        <t>-01: Working Version
+        Major modifications are:
+            <list style="hanging" hangIndent="6">
+                <t hangText="- Remove the DNS Zone file construction:">As suggested by Bernie Volz</t>
+                <t hangText="- DHCPv6 Client behavior:">Following options guide lines</t>
+                <t hangText="- DHCPv6 Server behavior:">Following options guide lines</t>
+            </list>
+        </t>
 
-    <t>-00: version published in the homenet WG. 
-    Major modifications are:
-        <list style="hanging" hangIndent="6">
-            <t hangText="- Reformatting of DHCP Options:">Following options guide lines</t>
-            <t hangText="- DHCPv6 Client behavior:">Following options guide lines</t>
-            <t hangText="- DHCPv6 Server behavior:">Following options guide lines</t>
-        </list>
-    </t>
+        <t>-00: version published in the homenet WG.
+        Major modifications are:
+            <list style="hanging" hangIndent="6">
+                <t hangText="- Reformatting of DHCP Options:">Following options guide lines</t>
+                <t hangText="- DHCPv6 Client behavior:">Following options guide lines</t>
+                <t hangText="- DHCPv6 Server behavior:">Following options guide lines</t>
+            </list>
+        </t>
     
-    <t>-00: First version published in dhc WG.</t>
+        <t>-00: First version published in dhc WG.</t>
 </section>
 
 
-    </back>
+        </back>
 </rfc>
-
