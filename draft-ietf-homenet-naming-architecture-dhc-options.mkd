@@ -62,12 +62,12 @@ author:
       -
         ins: W. Cloetens
         name: Wouter Cloetens
-        org: 
+        org: Deutsche Telekom 
         street: 
         city: 
         code: 
         country:
-        email: wouter@e2big.org
+        email: wouter.cloetens@external.telekom.de
 
 
 
